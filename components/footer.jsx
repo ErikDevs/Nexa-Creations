@@ -19,7 +19,7 @@ const Footer = () => {
                 <h3 className="ml-2"> Contact Us</h3>
               </div>
             <h1 className="text-4xl leading-relaxed font-bold">Have Project in Mind? <br />Contact Now, & Let's <br />Work Together</h1>
-            <p className="text-sm mt-10">We are ready to create a digital transformation <br /> for your brand. Let’s connect</p>
+            <p className="text-md mt-10">We are ready to create a digital transformation <br /> for your brand. Let’s connect</p>
             <Link href='https://api.whatsapp.com/send?phone=797710074&text=Hello%20Welcome%20to%20Nexa%20Creation,%20We%20are%20the%20leading%20digital%20services%20agency%20ranging%20from,%20Graphic%20design,%20web%20application%20and%20websites,%20Social%20Media%20Marketing%20and%20Social%20Media%20management'>
             <Button 
             icon = {<WhatsApp />} 
