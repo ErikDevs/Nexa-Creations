@@ -7,9 +7,9 @@ import Button from './button'
 
 const Navbar = () => {
   return (
-        <nav className='flex bg-gray-700 items-center h-30 justify-center top-0  gap-6'>
+        <nav className='flex bg-gray-700 items-center h-24 justify-center top-0  gap-6'>
             <Link href='/'>
-                 <Image src={logo} className='mr-24' alt='logo' height={100} width={150} />
+                 <Image src={logo} className='mr-24' alt='logo' height={100} width={200} />
             </Link>
              <ul className=' hidden font-medium  gap-8 lg:flex text-red-400'>{navLink.map(link => (
                 <Link href={link.href} key={link.key} className='font-lg flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold'>

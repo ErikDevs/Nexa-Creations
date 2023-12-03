@@ -12,13 +12,14 @@ const Footer = () => {
   return (
     <div className='bg-gray-700 py-20 mt-20 text-white'>
           <div className='flex  mx-[10%]'>
-            <Image src={mediaImage} className="w-[50%] mr-4" alt="flyer" />
-            <div className="flex-col">
+          <Image src={mediaImage} className="w-[30%] border-4 border-white drop-shadow-lg absolute z-10"  alt="flyer" />
+            <div className="bg-white -rotate-6 w-[38%]"></div>
+            <div className="flex-col ml-10">
               <div className="flex mb-5">
                 <AttachEmailIcon className="text-red-500" />
                 <h3 className="ml-2"> Contact Us</h3>
               </div>
-            <h1 className="text-4xl leading-relaxed font-bold">Have Project in Mind? <br />Contact Now, & Let's <br />Work Together</h1>
+            <h1 className="text-4xl leading-normal font-bold">Have Project in Mind? <br />Contact Now, & Let's <br />Work Together</h1>
             <p className="text-md mt-10">We are ready to create a digital transformation <br /> for your brand. Let’s connect</p>
             <Link href='https://api.whatsapp.com/send?phone=797710074&text=Hello%20Welcome%20to%20Nexa%20Creation,%20We%20are%20the%20leading%20digital%20services%20agency%20ranging%20from,%20Graphic%20design,%20web%20application%20and%20websites,%20Social%20Media%20Marketing%20and%20Social%20Media%20management'>
             <Button 
@@ -31,7 +32,7 @@ const Footer = () => {
           </div>
           <div className="flex mx-[10%] justify-center mt-10">
             <div className="flex-col">
-              <Link href='/'><Image src={logo} className="w-[40%]" /></Link>
+              <Link href='/'><Image src={logo} className="w-[50%]" /></Link>
               <h3 className="text-sm ml-5 -mt-4 leading-relaxed mb-10">At Nexa Creations Agency, Our core is to create <br /> digital transformation for your brand.</h3>
               {socialLinks.map(social => (
                 <Link key={social.key} href={social.href}>

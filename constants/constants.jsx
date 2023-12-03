@@ -42,8 +42,8 @@ export const navLink = [
 
 export const conatct = [
     {name: "+254 797 710 074", icon: <PhonelinkRingIcon className='text-white text-4xl' />,},
-    {name: "instagram", icon: <InstagramIcon className='text-white text-4xl' />,},
-    {name: "behance", icon: <AddBoxIcon className='text-white text-4xl' />,},
+    {name: "Instagram", icon: <InstagramIcon className='text-white text-4xl' />,},
+    {name: "Behance", icon: <AddBoxIcon className='text-white text-4xl' />,},
 ]
 
 export const services = [
