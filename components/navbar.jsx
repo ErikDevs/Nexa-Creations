@@ -7,7 +7,7 @@ import Button from './button'
 
 const Navbar = () => {
   return (
-        <nav className='flex bg-gray-700 items-center h-24 justify-center top-0  gap-6'>
+        <nav className='flex bg-gray-700 items-center h-30 justify-center top-0  gap-6'>
             <Link href='/'>
                  <Image src={logo} className='mr-24' alt='logo' height={100} width={150} />
             </Link>
