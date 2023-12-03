@@ -27,7 +27,7 @@ import AddBoxIcon from '@mui/icons-material/AddBox';
 
 
   const size = "text-4xl"
-  const counterSize = "text-6xl"
+  const counterSize = "text-4xl"
 
 
 export const navLink = [
