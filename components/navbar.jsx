@@ -11,7 +11,7 @@ const Navbar = () => {
             <Link href='/'>
                  <Image src={logo} className='mr-24' alt='logo' height={100} width={200} />
             </Link>
-             <ul className=' hidden font-medium  gap-8 lg:flex text-red-400'>{navLink.map(link => (
+             <ul className=' hidden font-medium  gap-8 lg:flex text-white'>{navLink.map(link => (
                 <Link href={link.href} key={link.key} className='font-lg flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold'>
                     {link.label}
                 </Link>
