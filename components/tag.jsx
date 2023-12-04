@@ -15,9 +15,8 @@ const Tag = () => {
          Elevate Your Brand Online Presence with Nexa Creations
          </h1>
          <p className='text-md text-center mt-10'>From web design to social media mastery, our tailored digital solutions make a lasting impact. Your brand’s success, our expertise. <br />Ready to rise? Connect with Nexa Creations.</p>
-         
     </div>
-    <div className='grid grid-flow-col mt-16 grid-rows-4 mx-[10%] gap-2'>
+    <div className='md:grid md:grid-flow-col md:grid-rows-6 lg:grid-rows-4 flex-col'>
          {cards.map(card => (
            <Card 
            key={card.key} 

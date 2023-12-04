@@ -4,10 +4,10 @@ import LoyaltyIcon from '@mui/icons-material/Loyalty';
 
 const Introduction = () => {
   return (
-    <div id="aboutus" className='mt-10 md:flex'>
+    <div id="aboutus" className='mt-10 lg:flex'>
         
         
-        <div className='flex-col md:w-[60%]'>
+        <div className='flex-col lg:w-[60%]'>
         
         <div className='flex items-center md:justify-start justify-center'>
         <LoyaltyIcon className='text-red-500 text-2xl'/>

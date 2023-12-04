@@ -5,7 +5,7 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 const Price = () => {
   return (
     <div id='price' className='flex mt-10 justify-center'>
-        <div className='md:flex gap-4 '>
+        <div className='lg:flex gap-4 '>
            {Pricing.map((ratecard) => (
             <div key={ratecard.key} className='flex-col px-2 py-2 hover:drop-shadow-lg hover:bg-white'>
              <div

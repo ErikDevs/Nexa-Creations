@@ -11,8 +11,8 @@ import { getIntouch, navLink, newsLetter, socialLinks } from "@/constants/consta
 const Footer = () => {
   return (
     <div className='bg-gray-700 py-20 mt-20 text-white'>
-          <div className='md:flex mx-[10%]'>
-          <Image src={mediaImage} className="md:w-[30%] border-4 mb-2 border-white drop-shadow-lg md:absolute z-10"  alt="flyer" />
+          <div className='lg:flex mx-[10%]'>
+          <Image src={mediaImage} className="lg:w-[30%] border-4 mb-2 border-white drop-shadow-lg lg:absolute z-10"  alt="flyer" />
             <div className="bg-white -rotate-6 md:flex hidden md:w-[38%]"></div>
             <div className="flex-col ml-10">
               <div className="flex mb-5">
@@ -30,7 +30,7 @@ const Footer = () => {
             </Link>
             </div>
           </div>
-          <div className="md:flex mx-[10%] justify-center mt-10">
+          <div className="lg:flex mx-[10%] justify-center mt-10">
             <div className="flex-col">
               <Link href='/'>
                 <Image src={logo} className="w-[50%] ml-0" />
@@ -56,7 +56,7 @@ const Footer = () => {
                 ))}
              </ul>
             </div>
-            <div className="flex-col md:ml-20 mt-10">
+            <div className="flex-col lg:ml-20 mt-10">
                   <h3 className="font-semibold mb-2">Get in touch</h3>
                   {getIntouch.map(contact => (
                          <Link className="flex" key={contact.key} href={contact.link}>
@@ -65,7 +65,7 @@ const Footer = () => {
                          </Link>
                   ))}
             </div>
-            <div className="flex-col mt-10 md:ml-20">
+            <div className="flex-col mt-10 lg:ml-20">
                 <h3 className="font-semibold">Newsletter</h3>
                 {newsLetter.map(letter => (
                    <h3 className="mt-2 text-sm" key={letter.key}>
