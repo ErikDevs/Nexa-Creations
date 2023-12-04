@@ -4,14 +4,15 @@ import CountUp from "react-countup"
 
 const Counter = () => {
   return (
-    <div className="mt-20 flex gap-8 justify-center">
+    <div className="md:flex justify-center px-5  py-8 mt-10 ">
         {acomplishments.map(acomplishment => (
-           <div key={acomplishment.key} className="bg-gray-700 flex text-white px-16 py-8 rounded-sm  drop-shadow-2xl font-semibold">
+           <div key={acomplishment.key} 
+           className="bg-gray-700 flex text-white rounded-sm mx-4 mt-2 px-4 py-4 drop-shadow-2xl font-semibold">
             <div className="bg-red-500 px-4 flex justify-center items-center rounded-md  mr-4" >
              {acomplishment.icon}
             </div>
-            <div className="flex flex-col items-end">
-            <h1 className="text-5xl font-bold">
+            <div className="flex-col md:items-end items-center">
+            <h1 className="md:text-5xl text-2xl font-bold">
             <CountUp
                 start={acomplishment.start}
                 end = {`${acomplishment.stop}`}

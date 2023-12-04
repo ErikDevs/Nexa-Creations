@@ -11,15 +11,15 @@ import { getIntouch, navLink, newsLetter, socialLinks } from "@/constants/consta
 const Footer = () => {
   return (
     <div className='bg-gray-700 py-20 mt-20 text-white'>
-          <div className='flex  mx-[10%]'>
-          <Image src={mediaImage} className="w-[30%] border-4 border-white drop-shadow-lg absolute z-10"  alt="flyer" />
-            <div className="bg-white -rotate-6 w-[38%]"></div>
+          <div className='md:flex mx-[10%]'>
+          <Image src={mediaImage} className="md:w-[30%] border-4 mb-2 border-white drop-shadow-lg md:absolute z-10"  alt="flyer" />
+            <div className="bg-white -rotate-6 md:flex hidden md:w-[38%]"></div>
             <div className="flex-col ml-10">
               <div className="flex mb-5">
                 <AttachEmailIcon className="text-red-500" />
                 <h3 className="ml-2"> Contact Us</h3>
               </div>
-            <h1 className="text-4xl leading-normal font-bold">Have Project in Mind? <br />Contact Now, & Let's <br />Work Together</h1>
+            <h1 className="text-4xl md:leading-normal font-bold">Have Project in Mind? <br />Contact us Now & Let's <br />Work Together</h1>
             <p className="text-md mt-10">We are ready to create a digital transformation <br /> for your brand. Let’s connect</p>
             <Link href='https://api.whatsapp.com/send?phone=797710074&text=Hello%20Welcome%20to%20Nexa%20Creation,%20We%20are%20the%20leading%20digital%20services%20agency%20ranging%20from,%20Graphic%20design,%20web%20application%20and%20websites,%20Social%20Media%20Marketing%20and%20Social%20Media%20management'>
             <Button 
@@ -30,10 +30,12 @@ const Footer = () => {
             </Link>
             </div>
           </div>
-          <div className="flex mx-[10%] justify-center mt-10">
+          <div className="md:flex mx-[10%] justify-center mt-10">
             <div className="flex-col">
-              <Link href='/'><Image src={logo} className="w-[50%]" /></Link>
-              <h3 className="text-sm ml-5 -mt-4 leading-relaxed mb-10">At Nexa Creations Agency, Our core is to create <br /> digital transformation for your brand.</h3>
+              <Link href='/'>
+                <Image src={logo} className="w-[50%] ml-0" />
+              </Link>
+              <h3 className="text-sm flex justify-start leading-relaxed mb-10">At Nexa Creations Agency, Our core is to create <br /> digital transformation for your brand.</h3>
               {socialLinks.map(social => (
                 <Link key={social.key} href={social.href}>
                   <i className="ring-2 ring-white text-center rounded-sm px-2 py-2 ml-5" key={social.key}>
@@ -42,7 +44,7 @@ const Footer = () => {
                 </Link>
               ))}
             </div>
-            <div className="flex-col ml-5 mt-10">
+            <div className="flex-col md:ml-5 mt-10">
               <h3 className="font-semibold">Quick Links</h3>
              <ul>
              {navLink.map(link => (
@@ -54,7 +56,7 @@ const Footer = () => {
                 ))}
              </ul>
             </div>
-            <div className="flex-col ml-20 mt-10">
+            <div className="flex-col md:ml-20 mt-10">
                   <h3 className="font-semibold mb-2">Get in touch</h3>
                   {getIntouch.map(contact => (
                          <Link className="flex" key={contact.key} href={contact.link}>
@@ -63,7 +65,7 @@ const Footer = () => {
                          </Link>
                   ))}
             </div>
-            <div className="flex-col mt-10 ml-20">
+            <div className="flex-col mt-10 md:ml-20">
                 <h3 className="font-semibold">Newsletter</h3>
                 {newsLetter.map(letter => (
                    <h3 className="mt-2 text-sm" key={letter.key}>

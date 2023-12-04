@@ -7,18 +7,20 @@ import Button from "./button"
 
 const Hero = () => { 
   return (
-    <div className='px-2 flex mt-8'>
-        <div className='hero-left flex-col lg:max-w-[600px]'>
-            <div className="flex items-center"><AddchartIcon className="text-red-500" />
-            <h3 className="text-sm ml-2">Welcome to Nexa Creative Digital Solutions</h3></div>
-            <h1 className="text-6xl font-extrabold text-gray-700  mt-4">We offer Digital Marketing & Graphic Design Solutions</h1>
-            <div className="grid grid-flow-col mt-4 grid-rows-2  gap-2">
+    <div className='md:flex block mx-2 mt-12'>
+        <div className='flex-col'>
+            <div className="flex items-center">
+              <AddchartIcon className="text-red-500 hidden md:flex" />
+              <h3 className="text-center md:text-left md:ml-2">Welcome to Nexa Creative Digital Solutions</h3>
+            </div>
+            <h1 className="text-4xl md:text-5xl  text-center md:text-left leading-25 font-extrabold text-gray-700  font-marriWeather mt-4">We offer Digital Marketing & Graphic Design Solutions</h1>
+            <div className="grid grid-flow-col mt-4 md:grid-rows-2 grid-rows-3 gap-2">
           {services.map(service => (
-            <Link href={service.href} key={service.key} className="bg-gray-700 text-white mt-4 text-sm px-2 py-3">{service.label}</Link>
+            <Link href={service.href} key={service.key} className="bg-gray-700 text-white text-center md:text-left text-sm px-2 py-3">{service.label}</Link>
           ))}
         </div>
-        <h3 className="mt-10">Join us in unlocking your business full potential and be the best in your niche!</h3>
-        <div className="flex mt-4 gap-2">
+        <h3 className="mt-10 md:text-left text-center">Join us in unlocking your business full potential and be the best in your niche!</h3>
+        <div className="flex justify-center md:justify-start gap-2 mt-4">
          {callToAction.map(action => (
            <Link key={action.title} href={action.href}>
              <Button
@@ -29,8 +31,8 @@ const Hero = () => {
          ))}
         </div>
         </div>
-        <div className='mx-2 w-[150%]'>
-            <Image src={heroPhoto} alt="hero-photo"/>
+        <div className='lg:flex w-[100%] h-[100%] hidden'>
+            <Image src={heroPhoto} className="w-[100%]" alt="hero-photo"/>
         </div>
         <div>
         </div>

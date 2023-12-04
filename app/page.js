@@ -9,7 +9,7 @@ import Tag from "@/components/tag";
 
 export default function Home() {
   return (
-    <main className="mx-[10%]" >
+    <main className="max-w-screen-xl mx-auto" >
       <Hero />
       <Counter />
       <Introduction />

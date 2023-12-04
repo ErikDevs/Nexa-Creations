@@ -12,7 +12,7 @@ const Tag = () => {
         <h3>We Do it with love</h3>
         </div>
          <h1 className='text-4xl text-center font-bold mt-6'>
-         Elevate Your Brand Online with Nexa Creations
+         Elevate Your Brand Online Presence with Nexa Creations
          </h1>
          <p className='text-md text-center mt-10'>From web design to social media mastery, our tailored digital solutions make a lasting impact. Your brand’s success, our expertise. <br />Ready to rise? Connect with Nexa Creations.</p>
          
