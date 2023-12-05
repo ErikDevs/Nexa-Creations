@@ -17,7 +17,7 @@ const Navbar = () => {
             </Link>
 
             {isOpen ?  (
-               <CloseIcon className='text-white text-4xl md:hidden z-20' onClick= {() => setIsOpen(false)} />
+               <CloseIcon className='text-white text-4xl flex md:hidden z-20' onClick= {() => setIsOpen(false)} />
             ): (<SegmentIcon className='text-white md:hidden text-4xl' onClick={() => setIsOpen(true)} />)}
              <ul 
              className= {`font-medium   ${isOpen ? "bg-gray-700 absolute left-36 top-16 bg-blend-overlay w-full right-36 px-8 h-full gap-2 z-10" : "hidden"}    md:gap-4 md:flex  text-white`}>
