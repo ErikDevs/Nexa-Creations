@@ -7,7 +7,7 @@ import DigitalImage from '@/public/digitalMarketing.jpg'
 const Whyus = () => {
   return (
     <div className='flex mt-10'>
-           <Image src={DigitalImage} className="lg:flex hidden w-[50%] mr-8"  alt="banner" />
+           <Image src={DigitalImage} className="lg:flex hidden w-[50%] h-[100%] mr-8"  alt="banner" />
            <div className='lg:w-[40%]'>
            <div className="flex"><CardMembershipIcon className="text-red-500 mr-4 text-md" /> <h3>Why Us</h3></div>
             <h1 className="md:text-4xl text-3xl mt-2 font-bold mx-2">

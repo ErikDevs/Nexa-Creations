@@ -15,13 +15,14 @@ const Navbar = () => {
             <Link href='/'>
                  <Image src={logo} className="md:mr-2 mr-36" width={150} alt='logo'  />
             </Link>
+
             {isOpen ?  (
                <CloseIcon className='text-white text-4xl md:hidden z-20' onClick= {() => setIsOpen(false)} />
             ): (<SegmentIcon className='text-white md:hidden text-4xl' onClick={() => setIsOpen(true)} />)}
              <ul 
-             className= {`font-medium   ${isOpen ? "bg-gray-700 absolute left-36 top-16 bg-blend-overlay w-full right-36 px-8 h-full gap-2 z-10" : "hidden"}    md:gap-4  md:flex  text-red-600`}>
+             className= {`font-medium   ${isOpen ? "bg-gray-700 absolute left-36 top-16 bg-blend-overlay w-full right-36 px-8 h-full gap-2 z-10" : "hidden"}    md:gap-4 md:flex  text-white`}>
                {navLink.map(link => (
-                <Link href={link.href} key={link.key} onClick ={() => setIsOpen(false)} className={`md:font-lg  cursor-pointer items-center pb-2 ${isOpen ? "px-4 block hover:bg-red-500 hover:text-white" : ""} transition-all  md:hover:font-bold`}>
+                <Link href={link.href} key={link.key} onClick ={() => setIsOpen(false)} className={`md:font-lg  cursor-pointer items-center pb-2 ${isOpen ? "px-4 block  hover:font-bold" : ""} transition-all  md:hover:font-bold`}>
                     {link.label}
                 </Link>
              ))}
