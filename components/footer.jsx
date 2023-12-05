@@ -33,7 +33,7 @@ const Footer = () => {
           <div className="lg:flex mx-[10%] justify-center mt-10">
             <div className="flex-col">
               <Link href='/'>
-                <Image src={logo} className="w-[50%] ml-0" />
+                <Image src={logo} className="w-[20%] ml-0" />
               </Link>
               <h3 className="text-sm flex justify-start leading-relaxed mb-10">At Nexa Creations Agency, Our core is to create <br /> digital transformation for your brand.</h3>
               {socialLinks.map(social => (

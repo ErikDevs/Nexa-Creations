@@ -98,7 +98,7 @@ export const cards = [
     {title: "Graphic Design", body: "Visual communication at its finest! Our Graphic Design services transform ideas into visually appealing designs that resonate with your audience, conveying messages that leave a lasting impact.", 
     href: "graphics", icon: <ScienceIcon/>, key: "graphicdesign"},
     {title: "Training & Consultation", body: "Empower your team with our tailored Training & Consultation services. From digital marketing strategies to skill enhancement, we equip your team with the tools they need to excel in the digital landscape.",
-    href: "training", icon: <ModelTrainingIcon className= {size} />, key: "traning"},
+    href: "#training", icon: <ModelTrainingIcon className= {size} />, key: "traning"},
 ]
 
 export const callToAction = [
