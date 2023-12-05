@@ -16,9 +16,11 @@ const Navbar = () => {
                  <Image src={logo} className="md:mr-2 mr-36" width={150} alt='logo'  />
             </Link>
 
+            <div className='md:hidden lg:hidden'>
             {isOpen ?  (
-               <CloseIcon className='text-white text-4xl flex md:hidden z-20' onClick= {() => setIsOpen(false)} />
-            ): (<SegmentIcon className='text-white md:hidden text-4xl' onClick={() => setIsOpen(true)} />)}
+               <CloseIcon className='text-white text-4xl z-20' onClick= {() => setIsOpen(false)} />
+            ): (<SegmentIcon className='text-white text-4xl' onClick={() => setIsOpen(true)} />)}
+            </div>
              <ul 
              className= {`font-medium   ${isOpen ? "bg-gray-700 absolute left-36 top-16 bg-blend-overlay w-full right-36 px-8 h-full gap-2 z-10" : "hidden"}    md:gap-4 md:flex  text-white`}>
                {navLink.map(link => (
