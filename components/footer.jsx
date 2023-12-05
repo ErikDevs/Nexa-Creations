@@ -21,7 +21,7 @@ const Footer = () => {
               </div>
             <h1 className="text-4xl md:leading-normal font-bold">Have Project in Mind? <br />Contact us Now & Let's <br />Work Together</h1>
             <p className="text-md mt-10">We are ready to create a digital transformation <br /> for your brand. Let’s connect</p>
-            <Link href='https://api.whatsapp.com/send?phone=797710074&text=Hello%20Welcome%20to%20Nexa%20Creation,%20We%20are%20the%20leading%20digital%20services%20agency%20ranging%20from,%20Graphic%20design,%20web%20application%20and%20websites,%20Social%20Media%20Marketing%20and%20Social%20Media%20management'>
+            <Link href='https://api.whatsapp.com/send?phone=+254797710074&text=Hello%20Welcome%20to%20Nexa%20Creation,%20We%20are%20the%20leading%20digital%20services%20agency%20ranging%20from,%20Graphic%20design,%20web%20application%20and%20websites,%20Social%20Media%20Marketing%20and%20Social%20Media%20management'>
             <Button 
             icon = {<WhatsApp />} 
             title= "WhatsApp Us" 
@@ -57,7 +57,7 @@ const Footer = () => {
              </ul>
             </div>
             <div className="flex-col lg:ml-20 mt-10">
-                  <h3 className="font-semibold mb-2">Get in touch</h3>
+                  <h3 className="font-semibold mb-2"> Get in touch </h3>
                   {getIntouch.map(contact => (
                          <Link className="flex" key={contact.key} href={contact.link}>
                          <i>{contact.icon}</i>
