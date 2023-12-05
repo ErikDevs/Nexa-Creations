@@ -23,10 +23,10 @@ const Footer = () => {
             <p className="text-md mt-10">We are ready to create a digital transformation <br /> for your brand. Let’s connect</p>
             <Link href='https://api.whatsapp.com/send?phone=+254797710074&text=Hello%20Welcome%20to%20Nexa%20Creation,%20We%20are%20the%20leading%20digital%20services%20agency%20ranging%20from,%20Graphic%20design,%20web%20application%20and%20websites,%20Social%20Media%20Marketing%20and%20Social%20Media%20management'>
             <Button 
-            icon = {<WhatsApp />} 
-            title= "WhatsApp Us" 
+             icon = {<WhatsApp />} 
+             title= "WhatsApp Us" 
             type= "butto"
-            variant="bg-red-500 px-5 py-2 mt-12"/>
+            variant="bg-red-500 py-2 mt-12"/>
             </Link>
             </div>
           </div>
@@ -45,7 +45,7 @@ const Footer = () => {
               ))}
             </div>
             <div className="flex-col md:-ml-[40%] mt-10">
-              <h3 className="font-semibold">Quick Links</h3>
+              <h3 className="font-semibold mb-2">Quick Links</h3>
              <ul>
              {navLink.map(link => (
                 <Link key={link.key} href={link.href}>
@@ -59,9 +59,9 @@ const Footer = () => {
             <div className="flex-col lg:ml-20 mt-10">
                   <h3 className="font-semibold mb-2"> Get in touch </h3>
                   {getIntouch.map(contact => (
-                         <Link className="flex" key={contact.key} href={contact.link}>
+                         <Link className="flex justify-start items-center" key={contact.key} href={contact.link}>
                          <i>{contact.icon}</i>
-                         <h3 className="text-sm mt-2 ml-2">{contact.title}</h3>
+                         <h3 className="text-sm ml-2">{contact.title}</h3>
                          </Link>
                   ))}
             </div>
