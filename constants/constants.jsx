@@ -47,12 +47,12 @@ export const conatct = [
 ]
 
 export const services = [
-    {href: '#digital-marketing', key: 'digitalmaketing', label: 'Digital Marketing'},
-    {href: '#Graphic Design', key: 'design', label: 'Graphic Design'},
-    {href: '#Socialmedia', key: 'socialmedia', label: 'Social Media Management'},
+    {href: '#socialmedia', key: 'digitalmaketing', label: 'Digital Marketing'},
+    {href: '#graphics', key: 'design', label: 'Graphic Design'},
+    {href: '#socialmedia', key: 'socialmedia', label: 'Social Media Management'},
     {href: '#seo', key: 'seo', label: 'SEO Marketing'},
-    {href: '#webdesign', key: 'web-design', label: 'Web Development'},
-    {href: '#more', key: 'others', label: "+Many More"}
+    {href: '#webdev', key: 'web-design', label: 'Web Development'},
+    {href: '#what-we-do', key: 'others', label: "+Many More"}
 ]
 
 export const acomplishments =  [
@@ -74,18 +74,31 @@ export const testimonial = [
 ]
 
 export const cards = [
-    {title: "Social Media Marketing", body: "Unlock the power of social platforms! Our Social Media Marketing services engage your audience, boost brand awareness, and drive conversions. From content creation to community management, we've got your social success covered.", icon: <WorkHistoryIcon className= {size} />, key: "socialmedia"},
-    {title: "Google & YouTube Advertising", body: "Reach the right audience at the right time! Leverage the vast reach of Google & YouTube through our expert advertising strategies. Drive targeted traffic, increase conversions, and maximize ROI with precision targeting.", icon: <GoogleIcon className= {size} />, key: "google"},
-    {title: "Website Development", body: "Make an impactful online debut with our stunning WordPress Website Designs. Combining aesthetics with functionality, we create user-friendly sites that enhance your brand's digital presence and drive engagement.", icon: <LanguageIcon className= {size} />, key: "wordpress"},
-    {title: "Search Engine Optimization (SEO)", body: "Climb the search rankings effortlessly! Our SEO experts optimize your website for higher visibility and organic traffic. Stay ahead in search results and dominate your industry online.", icon:<ContentPasteSearchIcon className= {size} />, key: "ecommerce"},
-    {title: "ECommerce Website Design", body: "Turn browsers into buyers with our eCommerce Website Designs. We craft seamless, secure, and visually appealing online stores that provide exceptional shopping experiences and boost sales.", icon: <ShoppingCartCheckoutIcon className= {size} />, key: "seo"},
-    {title: "Printing & Branding Services", body: "Make your brand tangible! Our Printing & Branding Services bring your vision to life through captivating designs on various materials. Elevate your brand identity and leave a lasting impression.", icon: <LocalPrintshopIcon className= {size} />, key: "printing"},
-    {title: "Experiential Marketing Services", body: "Create memorable brand experiences! Our Experiential Marketing Services design interactive campaigns that captivate audiences and establish strong emotional connections with your brand.", icon: <LocalConvenienceStoreIcon className= {size} />, key: "marketing"},
-    {title: "Ads Management", body: "Optimize your ad campaigns for success! Our Ads Management services fine-tune your campaigns for maximum impact. From budget allocation to targeting, we ensure your ads yield impressive results.", icon: <AdbIcon className= {size} />, key: "ads"},
-    {title: "UI/UX Design", body: "Craft exceptional user experiences! Our UI/UX Design services focus on creating user-centric designs that enhance usability, engagement, and overall satisfaction across digital platforms.", icon: <ViewQuiltIcon className= {size} />, key: "ui"},
-    {title: "Brand Identity Design", body: "Stand out from the crowd with a strong brand identity! Our Brand Identity Design services create a cohesive visual identity that communicates your values, mission, and uniqueness effectively.", icon: <FolderSpecialIcon className= {size} />, key: "brand"},
-    {title: "Graphic Design", body: "Visual communication at its finest! Our Graphic Design services transform ideas into visually appealing designs that resonate with your audience, conveying messages that leave a lasting impact.", icon: <ScienceIcon/>, key: "graphicdesign"},
-    {title: "Training & Consultation", body: "Empower your team with our tailored Training & Consultation services. From digital marketing strategies to skill enhancement, we equip your team with the tools they need to excel in the digital landscape.", icon: <ModelTrainingIcon className= {size} />, key: "traning"},
+    {title: "Social Media Marketing", body: "Unlock the power of social platforms! Our Social Media Marketing services engage your audience, boost brand awareness, and drive conversions. From content creation to community management, we've got your social success covered.", 
+    href: "socialmedia", icon: <WorkHistoryIcon className= {size} />, key: "socialmedia"},
+    {title: "Google & YouTube Advertising", body: "Reach the right audience at the right time! Leverage the vast reach of Google & YouTube through our expert advertising strategies. Drive targeted traffic, increase conversions, and maximize ROI with precision targeting.", 
+    href: "google", icon: <GoogleIcon className= {size} />, key: "google"},
+    {title: "Website Development", 
+    body: "Make an impactful online debut with our stunning WordPress Website Designs. Combining aesthetics with functionality, we create user-friendly sites that enhance your brand's digital presence and drive engagement.", 
+    href: "webdev", icon: <LanguageIcon className= {size} />, key: "wordpress"},
+    {title: "Search Engine Optimization (SEO)", body: "Climb the search rankings effortlessly! Our SEO experts optimize your website for higher visibility and organic traffic. Stay ahead in search results and dominate your industry online.", 
+    href: "seo", icon:<ContentPasteSearchIcon className= {size} />, key: "ecommerce"},
+    {title: "ECommerce Website Design", body: "Turn browsers into buyers with our eCommerce Website Designs. We craft seamless, secure, and visually appealing online stores that provide exceptional shopping experiences and boost sales.",
+    href: "ecom", icon: <ShoppingCartCheckoutIcon className= {size} />, key: "seo"},
+    {title: "Printing & Branding Services", body: "Make your brand tangible! Our Printing & Branding Services bring your vision to life through captivating designs on various materials. Elevate your brand identity and leave a lasting impression.", 
+    href: "branding", icon: <LocalPrintshopIcon className= {size} />, key: "printing"},
+    {title: "Experiential Marketing Services", body: "Create memorable brand experiences! Our Experiential Marketing Services design interactive campaigns that captivate audiences and establish strong emotional connections with your brand.", 
+    href: "marketing", icon: <LocalConvenienceStoreIcon className= {size} />, key: "marketing"},
+    {title: "Ads Management", body: "Optimize your ad campaigns for success! Our Ads Management services fine-tune your campaigns for maximum impact. From budget allocation to targeting, we ensure your ads yield impressive results.", 
+    href: "ads", icon: <AdbIcon className= {size} />, key: "ads"},
+    {title: "UI/UX Design", body: "Craft exceptional user experiences! Our UI/UX Design services focus on creating user-centric designs that enhance usability, engagement, and overall satisfaction across digital platforms.", 
+    href: "ui", icon: <ViewQuiltIcon className= {size} />, key: "ui"},
+    {title: "Brand Identity Design", body: "Stand out from the crowd with a strong brand identity! Our Brand Identity Design services create a cohesive visual identity that communicates your values, mission, and uniqueness effectively.", 
+    href: "branding", icon: <FolderSpecialIcon className= {size} />, key: "brand"},
+    {title: "Graphic Design", body: "Visual communication at its finest! Our Graphic Design services transform ideas into visually appealing designs that resonate with your audience, conveying messages that leave a lasting impact.", 
+    href: "graphics", icon: <ScienceIcon/>, key: "graphicdesign"},
+    {title: "Training & Consultation", body: "Empower your team with our tailored Training & Consultation services. From digital marketing strategies to skill enhancement, we equip your team with the tools they need to excel in the digital landscape.",
+    href: "training", icon: <ModelTrainingIcon className= {size} />, key: "traning"},
 ]
 
 export const callToAction = [
