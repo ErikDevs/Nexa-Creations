@@ -38,13 +38,13 @@ const Footer = () => {
               <h3 className="text-sm flex justify-start leading-relaxed mb-10">At Nexa Creations Agency, Our core is to create <br /> digital transformation for your brand.</h3>
               {socialLinks.map(social => (
                 <Link key={social.key} href={social.href}>
-                  <i className="ring-2 ring-white text-center rounded-sm px-2 py-2 ml-5" key={social.key}>
+                  <i className="ring-2 ring-white text-center rounded-sm px-2 py-2 ml-2" key={social.key}>
                   {social.icon}
                   </i>
                 </Link>
               ))}
             </div>
-            <div className="flex-col md:ml-5 mt-10">
+            <div className="flex-col md:-ml-[40%] mt-10">
               <h3 className="font-semibold">Quick Links</h3>
              <ul>
              {navLink.map(link => (
