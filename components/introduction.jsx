@@ -1,14 +1,42 @@
+ "use client"
 import Button from '@/components/button'
+import { useEffect } from 'react';
 import { specialization } from '@/constants/constants'
 import LoyaltyIcon from '@mui/icons-material/Loyalty';
+import {useInView } from 'react-intersection-observer'
+import {motion, useAnimation } from "framer-motion"
+
 
 const Introduction = () => {
+  const heroVariant = {
+    visible: {opacity: 1},
+    hidden : {opacity: 0}
+ }
+
+ const control = useAnimation()
+
+ 
+
+ const [ref, inView] = useInView()
+
+ useEffect(() => {
+   if(inView) {
+     control.start("visible")
+     control.start("height")
+   } else {
+     control.start("hidden")
+   }
+ }, [control, inView]);
   return (
-    <div id="aboutus" className='mt-10 lg:flex'>
-        
-        
+    <motion.div
+    ref={ref}
+    variants={heroVariant}
+    initial = "hidden"
+    animate = {control}
+    transition={{duration: 0.3}}
+    
+    id="aboutus" className='mt-10 lg:flex'>
         <div className='flex-col lg:w-[60%]'>
-        
         <div className='flex items-center md:justify-start justify-center'>
         <LoyaltyIcon className='text-red-500 text-2xl'/>
         <h3 className='ml-2 text-sm'>What We Do</h3>
@@ -27,11 +55,14 @@ const Introduction = () => {
         </div>
         </div>
 
-        <div className='md:m-4 flex-col '>
+        <div className='md:m-4 flex-col'>
+        
             {specialization.map(service => (
               <div key={service.key} className= 'hover:bg-white hover:drop-shadow-2xl mt-4 px-4 py-6 md:px-5 md:mx-16  flex'>
               <div className="flex items-center">
+              
                 <i className='text-white bg-red-500 rounded-md px-2 py-2'>{service.icon}</i>
+                
               </div>
               <div className=' ml-5 flex flex-col'>
                 <h2 className='md:text-2xl text-lg font-semibold text-gray-700 '>{service.title}</h2>
@@ -41,7 +72,7 @@ const Introduction = () => {
             ))}
         </div>
 
-    </div>
+    </motion.div>
   )
 }
 

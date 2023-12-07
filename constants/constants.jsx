@@ -32,12 +32,12 @@ import AddBoxIcon from '@mui/icons-material/AddBox';
 
 export const navLink = [
     {href: '/', key: 'home', label: "Home"},
-    {href: '#aboutus', key: 'about', label: "About Us"},
-    {href: '#what-we-do', key: 'work', label: "What We Do"},
+    {href: '/#aboutus', key: 'about', label: "About Us"},
+    {href: '/#what-we-do', key: 'work', label: "What We Do"},
     {href: '/portfolio', key: 'portifolio', label: "Portfolio"},
-    {href: '#price', key: 'Pricing', label: "Pricing"},
-    {href: '#blog', key: 'blog', label: "Blog"},
-    {href: '#contact', key: "contact", label: 'Contact Us'}
+    {href: '/#price', key: 'Pricing', label: "Pricing"},
+    {href: '/#blog', key: 'blog', label: "Blog"},
+    {href: '/#contact', key: "contact", label: 'Contact Us'}
 ]
 
 export const conatct = [

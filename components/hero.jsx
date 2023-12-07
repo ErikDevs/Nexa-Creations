@@ -1,17 +1,48 @@
+"use client"
 import Link from "next/link"
 import Image from "next/image"
+import { useEffect } from "react"
 import heroPhoto from '../public/20945379.jpg'
 import { callToAction, services } from "@/constants/constants"
 import AddchartIcon from '@mui/icons-material/Addchart';
 import Button from "./button"
+import { useInView } from "react-intersection-observer"
+import {motion, useAnimation } from "framer-motion"
 
 const Hero = () => { 
+
+  const heroVariant = {
+     visible: {opacity: 1, scale: 1, x:1},
+     hidden : {opacity: 0, scale: 0, x:0}
+  }
+
+  const control = useAnimation()
+
+  
+
+  const [ref, inView] = useInView()
+
+  useEffect(() => {
+    if(inView) {
+      control.start("visible")
+      control.start("height")
+    } else {
+      control.start("hidden")
+    }
+  }, [control, inView]);
+
   return (
-    <div className='md:flex block mx-2 mt-12'>
-        <div className='flex-col'>
+    <motion.div
+    ref={ref}
+    variants={heroVariant}
+    initial = "hidden"
+    animate = {control}
+    transition={{duration: 0.5}}
+    className='md:flex md:items-center mx-2'>
+        <div className='flex-col mt-5'>
             <div className="flex items-center">
               <AddchartIcon className="text-red-500 hidden md:flex" />
-              <h3 className="text-center md:text-left md:ml-2">Welcome to Nexa Creative Digital Solutions</h3>
+              <h3 className="md:text-left md:ml-2">Welcome to Nexa Creative Digital Solutions</h3>
             </div>
             <h1 className="text-4xl md:text-5xl  text-center md:text-left leading-25 font-extrabold text-gray-700  font-marriWeather mt-4">We offer Digital Marketing & Graphic Design Solutions</h1>
             <div className="grid grid-flow-col mt-4 md:grid-rows-2 grid-rows-3 gap-2">
@@ -36,7 +67,7 @@ const Hero = () => {
         </div>
         <div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 

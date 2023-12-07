@@ -6,14 +6,15 @@ import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 import Link from "next/link";
 import logo from '@/public/logo.png'
 import { getIntouch, navLink, newsLetter, socialLinks } from "@/constants/constants";
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 
 const Footer = () => {
   return (
-    <div className='bg-gray-700 py-20 mt-20 text-white'>
+    <div className='bg-gray-700 py-20 mt-20 relative text-white'>
           <div className='lg:flex mx-[10%]'>
-          <Image src={mediaImage} className="lg:w-[30%] border-4 mb-2 border-white drop-shadow-lg lg:absolute z-10"  alt="flyer" />
-            <div className="bg-white -rotate-6 md:flex hidden md:w-[38%]"></div>
+          <Image src={mediaImage} className="lg:w-[30%] border-4 mb-2 border-white drop-shadow-lg lg:absolute z-10" alt="flyer" />
+            <div className="bg-white -rotate-6 md:flex hidden md:w-[37%]"></div>
             <div className="flex-col ml-10">
               <div className="flex mb-5">
                 <AttachEmailIcon className="text-red-500" />
@@ -30,21 +31,21 @@ const Footer = () => {
             </Link>
             </div>
           </div>
-          <div className="lg:flex mx-[10%] justify-center mt-10">
+          <div className="lg:flex mx-[10%] justify-center mt-16">
             <div className="flex-col">
               <Link href='/'>
-                <Image src={logo} className="w-[20%] ml-0" />
+                <Image src={logo} className="w-[50%] ml-0" />
               </Link>
-              <h3 className="text-sm flex justify-start leading-relaxed mb-10">At Nexa Creations Agency, Our core is to create <br /> digital transformation for your brand.</h3>
+              <h3 className="text-sm flex justify-start leading-relaxed mb-6 mt-6">At Nexa Creations Agency, Our core is to create <br /> digital transformation for your brand.</h3>
               {socialLinks.map(social => (
                 <Link key={social.key} href={social.href}>
-                  <i className="ring-2 ring-white text-center rounded-sm px-2 py-2 ml-2" key={social.key}>
+                  <i className="ring-2 ring-white text-center rounded-sm px-2  py-2 ml-2" key={social.key}>
                   {social.icon}
                   </i>
                 </Link>
               ))}
             </div>
-            <div className="flex-col md:-ml-[40%] mt-10">
+            <div className="flex-col mt-10 ml-12">
               <h3 className="font-semibold mb-2">Quick Links</h3>
              <ul>
              {navLink.map(link => (
@@ -65,6 +66,7 @@ const Footer = () => {
                          </Link>
                   ))}
             </div>
+            <Link href= '#nav'><i className='bg-red-500 rounded-full px-2 py-2 top-2 right-12 absolute'><ArrowUpwardIcon className='text-white text-4xl' /></i></Link>
             <div className="flex-col mt-10 lg:ml-20">
                 <h3 className="font-semibold">Newsletter</h3>
                 {newsLetter.map(letter => (
