@@ -9,6 +9,7 @@ import Button from "./button"
 import { useInView } from "react-intersection-observer"
 import {motion, useAnimation } from "framer-motion"
 
+
 const Hero = () => { 
 
   const heroVariant = {
@@ -39,6 +40,7 @@ const Hero = () => {
     animate = {control}
     transition={{duration: 0.5}}
     className='md:flex md:items-center mx-2'>
+    
         <div className='flex-col mt-5'>
             <div className="flex items-center">
               <AddchartIcon className="text-red-500 hidden md:flex" />
@@ -73,6 +75,9 @@ const Hero = () => {
             <Image src={heroPhoto} className="w-[100%]" alt="hero-photo"/>
         </div>
         <div>
+        
+            
+
         </div>
     </motion.div>
   )

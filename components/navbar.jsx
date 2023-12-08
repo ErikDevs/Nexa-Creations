@@ -24,7 +24,7 @@ const Navbar = () => {
                  <Image src={logo} width={150} alt='logo' />
             </Link>
 
-            <div className='lg:hidden absolute right-4 top-2'>
+            <div className='lg:hidden bg-red-500 h-fit px-4 py-5 absolute right-0 bottom-0 top-0'>
             {isOpen ?  (
                <CloseIcon className='text-white text-4xl ' onClick= {() => setIsOpen(false)} />
             ): (<SegmentIcon className='text-white text-4xl' onClick={() => setIsOpen(true)} />)}
@@ -48,7 +48,7 @@ const Navbar = () => {
             {/* Desktop view and tablet */}
             <ul className= "font-medium bg-gray-700 lg:gap-4 lg:justify-center  lg:mr-10 lg:items-center lg:flex hidden text-red-500">
                {navLink.map(link => (
-                <Link href={link.href} key={link.key}  className="md:font-lg cursor-pointer items-center md:hover:font-bold  transition-all">
+                <Link href={link.href} key={link.key} onClick={() => setIsOpen(false)} className="md:font-lg cursor-pointer items-center md:hover:font-bold  transition-all">
                     {link.label}
                 </Link>
              ))}

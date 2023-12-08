@@ -1,12 +1,12 @@
 import Image from "next/image"
 import Button from "./button"
-import { Key, WhatsApp } from "@mui/icons-material"
+import {  WhatsApp } from "@mui/icons-material"
 import mediaImage from '@/public/socialMedia.jpg'
 import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 import Link from "next/link";
 import logo from '@/public/logo.png'
 import { getIntouch, navLink, newsLetter, socialLinks } from "@/constants/constants";
-import KeyboardCapslockIcon from '@mui/icons-material/KeyboardCapslock';
+
 
 
 const Footer = () => {
@@ -38,10 +38,7 @@ const Footer = () => {
 
             {/* nav links */}
            
-           <Link className="flex -mb-10 topper mt-2 justify-center" href= '#nav'>
-            <KeyboardCapslockIcon className="text-4xl mt-4 bg-gray-900 rounded-lg"/>
-             <h2 className="top">Click to Go back to the top</h2>
-           </Link>
+        
          
            <div className="md:flex block px-10 md:px-0  bg-gray-900 py-4 justify-center mt-8">
            
