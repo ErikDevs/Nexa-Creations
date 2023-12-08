@@ -8,16 +8,14 @@ import {motion, useAnimation } from "framer-motion"
 
 
 const Introduction = () => {
-  const heroVariant = {
-    visible: {opacity: 1, scale: 1, x:1},
-    hidden : {opacity: 0, scale: 0, x:0}
+  const introVariant = {
+    visible: {opacity: 1, y: 0},
+    hidden : {opacity: 0, y: 50}
  }
 
  const control = useAnimation()
-
- 
-
  const [ref, inView] = useInView()
+ 
 
  useEffect(() => {
    if(inView) {
@@ -27,15 +25,17 @@ const Introduction = () => {
      control.start("hidden")
    }
  }, [control, inView]);
+
   return (
+
     <motion.div
-    ref={ref}
-    variants={heroVariant}
-    initial = "hidden"
-    animate = {control}
-    transition={{duration: 0.3}}
+       ref={ref}
+       variants={introVariant}
+       initial = "hidden"
+       animate = {control}
+       transition={{duration: 0.5}}
     
-    id="aboutus" className='mt-10 lg:flex'>
+        id="aboutus" className='mt-20 lg:flex'>
         <div className='flex-col lg:w-[60%]'>
         <div className='flex items-center md:justify-start justify-center'>
         <LoyaltyIcon className='text-red-500 text-2xl'/>

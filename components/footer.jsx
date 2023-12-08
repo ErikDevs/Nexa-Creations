@@ -1,56 +1,57 @@
 import Image from "next/image"
 import Button from "./button"
-import { WhatsApp } from "@mui/icons-material"
+import { Key, WhatsApp } from "@mui/icons-material"
 import mediaImage from '@/public/socialMedia.jpg'
 import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 import Link from "next/link";
 import logo from '@/public/logo.png'
 import { getIntouch, navLink, newsLetter, socialLinks } from "@/constants/constants";
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import KeyboardCapslockIcon from '@mui/icons-material/KeyboardCapslock';
 
 
 const Footer = () => {
   return (
-    <div className='bg-gray-700 py-8 px-[10%] lg:mt-20 relative text-white'>
-          <div className='lg:flex'>
-            <Image src={mediaImage} width={400}  className=" border-4 mb-2 border-white drop-shadow-lg" alt="flyer" />
-            <div className="flex-col ml-10">
+    <div className='bg-gray-700 py-8 lg:mt-20 relative text-white'>
+      
+          <div className='md:flex md:mx-56'>
+            <Image src={mediaImage} width={400}  className="md:mr-10 border-4 mb-2 border-white drop-shadow-lg" alt="flyer" />
+            <div className="flex-col px-2">
               <div className="flex mb-5">
                 <AttachEmailIcon className="text-red-500" />
                 <h3 className="ml-2"> Contact Us</h3>
               </div>
-            <h1 className="text-4xl md:leading-normal font-bold">Have Project in Mind? <br /> Contact us Now & Let's Work Together</h1>
-            <p className="text-md mt-10">We are ready to create a digital transformation for your brand. Let’s connect</p>
+            <h1 className="text-4xl md:leading-normal font-bold">Have Project in Mind? <br className="hidden md:flex" /> Contact us Now & Let's Work Together</h1>
+            <p className="text-md md:mt-6">We are ready to create a digital transformation for your brand. Let’s connect</p>
             <Link href='https://api.whatsapp.com/send?phone=+254797710074&text=Hello%20Welcome%20to%20Nexa%20Creation,%20We%20are%20the%20leading%20digital%20services%20agency%20ranging%20from,%20Graphic%20design,%20web%20application%20and%20websites,%20Social%20Media%20Marketing%20and%20Social%20Media%20management'>
             <Button 
              icon = { <WhatsApp /> } 
              title= "WhatsApp Us" 
             type= "butto"
-            variant="bg-red-500 py-2 mt-12"/>
+            variant="bg-red-500 py-2 mt-6 mb-10"/>
             </Link>
             </div>
           </div>
 
-          {/* bottom footer */}
-          <div className="lg:flex relative mt-8">
-            <div className="flex-col mx-20">
-              <Link className="flex justify-start" href='/'>
-                <Image src={logo} width={150} />
+          {/* bottom footer logo section */}
+         
+           
+
+            {/* nav links */}
+           
+           <Link className="flex -mb-10 topper mt-2 justify-center" href= '#nav'>
+            <KeyboardCapslockIcon className="text-4xl mt-4 bg-gray-900 rounded-lg"/>
+             <h2 className="top">Click to Go back to the top</h2>
+           </Link>
+         
+           <div className="md:flex block px-10 md:px-0  bg-gray-900 py-4 justify-center mt-8">
+           
+           <div className="md:mr-12">
+              <Link className="md:flex  justify-start" href='/'>
+                <Image  src={logo} width={150} />
               </Link>
-              <h3 className="text-sm flex justify-start leading-relaxed mx-6 my-6">At Nexa Creations Agency, Our core is to create <br /> digital transformation for your brand.</h3>
-              <div className="mx-6 md:static absolute top-4 left-32 ">
-              {socialLinks.map(social => (
-                <Link key={social.key} href={social.href}>
-                  <i className="ring-2 ring-white text-center rounded-sm px-2  py-2 ml-2" key={social.key}>
-                  {social.icon}
-                  </i>
-                </Link>
-              ))}
-              </div>
             </div>
-           <div className="grid grid-flow-col grid-rows-2">
-           <div className="flex-col mt-10">
-              <h3 className="font-semibold mb-2">Quick Links</h3>
+           <div className="flex-col">
+              <h3 className="font-semibold mt-6 mb-2">Quick Links</h3>
              <ul>
              {navLink.map(link => (
                 <Link key={link.key} href={link.href}>
@@ -62,9 +63,8 @@ const Footer = () => {
              </ul>
             </div>
             
-            
-            <Link href= '#nav'><i className='bg-red-500 rounded-full px-2 py-2 bottom-0 right-12 absolute'><ArrowUpwardIcon className='text-white text-2xl' /></i></Link>
-            <div className="flex-col mt-10 mx-20">
+           
+            <div className="flex-col mt-5 md:mx-20">
                 <h3 className="font-semibold">Newsletter</h3>
                 {newsLetter.map(letter => (
                    <h3 className="mt-2 text-sm" key={letter.key}>
@@ -72,7 +72,7 @@ const Footer = () => {
                    </h3>
                 ))}
             </div>
-            <div className="flex-col lg:ml-20 ml-6 mt-2">
+            <div className="flex-col mt-5 md:ml-6">
                   <h3 className="font-semibold mb-2"> Get in touch </h3>
                   {getIntouch.map(contact => (
                          <Link className="flex justify-start items-center" key={contact.key} href={contact.link}>
@@ -80,10 +80,20 @@ const Footer = () => {
                          <h3 className="text-sm ml-2">{contact.title}</h3>
                          </Link>
                   ))}
+              <div className="md:mt-10 mt-8 md:static flex">
+              {socialLinks.map(social => (
+                <Link key={social.key} href={social.href}>
+                  <i className="ring-2 ring-white text-center rounded-sm px-2  py-2 ml-2" key={social.key}>
+                  {social.icon}
+                  </i>
+                </Link>
+              ))}
+              </div>
             </div>
+           
            </div>
   
-          </div>
+          
     </div>
   )
 }

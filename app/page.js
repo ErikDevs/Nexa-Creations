@@ -1,3 +1,4 @@
+"use client"
 import Whyus from "@/components/Whyus";
 import Blog from "@/components/blog";
 import Contact from "@/components/contact";
@@ -9,7 +10,8 @@ import Tag from "@/components/tag";
 
 export default function Home() {
   return (
-    <main className="max-w-screen-xl md:mx-[5%] text-gray-700 mx-auto" >
+    <main className="max-w-screen-xl lg:flex lg:justify-center  text-gray-700 mx-auto" >
+      <div className="flex-col">
       <Hero />
       <Counter />
       <Introduction />
@@ -18,6 +20,7 @@ export default function Home() {
       <Price />
       <Contact />
       <Blog />
+      </div>
     </main>
   )
 }

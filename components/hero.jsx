@@ -12,15 +12,15 @@ import {motion, useAnimation } from "framer-motion"
 const Hero = () => { 
 
   const heroVariant = {
-     visible: {opacity: 1, scale: 1, x:1},
-     hidden : {opacity: 0, scale: 0, x:0}
+     visible: {opacity: 1, y: 50},
+     hidden : {opacity: 0, y: 0}
   }
-
   const control = useAnimation()
-
-  
-
-  const [ref, inView] = useInView()
+  const [ref, inView] = useInView(
+    {
+      triggerOnce: false,
+    }
+  )
 
   useEffect(() => {
     if(inView) {
@@ -44,10 +44,17 @@ const Hero = () => {
               <AddchartIcon className="text-red-500 hidden md:flex" />
               <h3 className="md:text-left md:ml-2">Welcome to Nexa Creative Digital Solutions</h3>
             </div>
-            <h1 className="text-4xl md:text-6xl  text-center md:text-left leading-loose font-extrabold text-gray-700  font-marriWeather mt-4">We offer Digital Marketing & Graphic Design Solutions</h1>
+            <h1 
+            className="text-4xl md:text-6xl  text-left md:text-left font-extrabold
+             text-gray-700 font-marriWeather mt-4">
+              We offer Digital Marketing & Graphic Design Solutions
+            </h1>
             <div className="grid grid-flow-col mt-4 md:grid-rows-2 grid-rows-3 gap-2">
           {services.map(service => (
-            <Link href={service.href} key={service.key} className="bg-gray-700 text-white text-center md:text-left  text-sm px-3 py-5">{service.label}</Link>
+            <Link href={service.href} key={service.key} 
+              className="bg-gray-700 text-white text-center md:text-left text-sm px-2 lg:px-5 py-5">
+              {service.label}
+            </Link>
           ))}
         </div>
         <h3 className="mt-10 md:text-left text-center">Join us in unlocking your business full potential and be the best in your niche!</h3>

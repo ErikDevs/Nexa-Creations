@@ -1,10 +1,36 @@
+"use client"
+import {useInView } from 'react-intersection-observer'
+import {motion , useAnimation }  from 'framer-motion'
+import { useEffect } from 'react'
 import Image from 'next/image'
 import React from 'react'
 import blogImage from '@/public/digitalMarketing.jpg'
 
 const Blog = () => {
+  const blogVariant = {
+    visible: {opacity: 1, height: "auto"},
+    hidden : {opacity: 0, height: "0"}
+ }
+
+ const control = useAnimation()
+ const [ref, inView] = useInView()
+
+ useEffect(() => {
+   if(inView) {
+     control.start("visible")
+     control.start("height")
+   } else {
+     control.start("hidden")
+   }
+ }, [control, inView]);
   return (
-    <div id='blog' className='flex-col mt-20'>
+    <motion.div
+    
+    ref={ref}
+    variants={blogVariant}
+    initial = "hidden"
+    animate = {control}
+    transition={{duration: 2}}id='blog' className='flex-col mt-20'>
         <div className='flex items-center ml-2'>
             <hr className='w-16 gap-2 h-1 mr-2 bg-red-500'/> 
             <h3 className='font-semibold text-lg'> Top Stories </h3>
@@ -19,7 +45,7 @@ const Blog = () => {
                 <p className='text-gray-500 text-lg'>What Are The Most In-Demand Skills in Graphic Design. <br /> The best Graphic Design Skills you should Learn in 2023.</p>
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -1,5 +1,7 @@
+
 import { DM_Sans, Inter, Poppins, Sora } from 'next/font/google'
 import './globals.css'
+
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 
@@ -16,9 +18,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={sora.className}>
+      
         <Navbar />
         {children}
         <Footer />
+      
         </body>
     </html>
   )

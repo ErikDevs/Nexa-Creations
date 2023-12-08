@@ -4,3 +4,22 @@
 
 
   
+.top {
+    margin-top: 2rem;
+    display: none;
+    z-index: 1;
+    position: absolute;
+}
+
+.topper {
+    position: relative;
+}
+
+.topper:hover .top {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: rgb(44, 44, 44);
+    padding: 0.5rem;
+    border-radius: 10px;
+}

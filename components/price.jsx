@@ -1,10 +1,35 @@
+"use client"
 import { Pricing } from '@/constants/constants'
-import React from 'react'
+import { useEffect } from 'react'
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import {motion, useAnimation } from 'framer-motion'
+import {useInView } from 'react-intersection-observer'
 
 const Price = () => {
+  const heroVariant = {
+    visible: {opacity: 1, y: 0},
+    hidden : {opacity: 0, y: 50}
+ }
+
+ const control = useAnimation()
+ const [ref, inView] = useInView()
+
+ useEffect(() => {
+   if(inView) {
+     control.start("visible")
+     control.start("height")
+   } else {
+     control.start("hidden")
+   }
+ }, [control, inView]);
   return (
-    <div id='price' className='flex mt-10 justify-center'>
+    <motion.div
+        ref={ref}
+        variants={heroVariant}
+        initial = "hidden"
+        animate = {control}
+        transition={{duration: 1}}
+    id='price' className='flex mt-10 justify-center'>
         <div className='lg:flex gap-4 '>
            {Pricing.map((ratecard) => (
             <div key={ratecard.key} className='flex-col'>
@@ -28,7 +53,7 @@ const Price = () => {
              </div>
            ))}
         </div>
-    </div>
+    </motion.div>
   )
 }
 

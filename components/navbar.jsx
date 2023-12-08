@@ -5,28 +5,32 @@ import { navLink } from '@/constants/constants'
 import logo from '@/public/logo.png';
 import Link from 'next/link'
 import Button from './button'
-import {motion} from 'framer-motion'
 import SegmentIcon from '@mui/icons-material/Segment';
 import CloseIcon from '@mui/icons-material/Close';
+import {motion } from "framer-motion"
 
 const Navbar = () => {
+   
+   
    const [isOpen, setIsOpen] = useState(false)
    const  variants = {
       open : {opacity: 1, height: "auto"},
       closed: {opacity: 0, height: "0"}
     }
   return (
-        <nav id='nav' className='lg:flex bg-gray-700 block items-center md:py-4 lg:h-28 lg:gap-4 lg:justify-center'>
-            <Link className='md:flex md:justify-start' href='/'>
+        <nav  id='nav' className='lg:flex bg-gray-700 block lg:items-center py-1 md:py-4 lg:h-28 lg:gap-4 '>
+           
+           <Link className='lg:ml-40 flex justify-start' href='/'>
                  <Image src={logo} width={150} alt='logo' />
             </Link>
-            
+
             <div className='lg:hidden absolute right-4 top-2'>
             {isOpen ?  (
                <CloseIcon className='text-white text-4xl ' onClick= {() => setIsOpen(false)} />
             ): (<SegmentIcon className='text-white text-4xl' onClick={() => setIsOpen(true)} />)}
             </div>
              <motion.ul
+            
                className= {`font-medium ${isOpen ? "bg-gray-700 bg-blend-overlay block md:block md:w-full w-full mt-6 pl-4 md:mt-6" : "hidden"}  text-red-500`}
                variants={variants}
                animate={isOpen ? "open" : "closed"}
@@ -42,15 +46,13 @@ const Navbar = () => {
             </motion.ul>
 
             {/* Desktop view and tablet */}
-            <ul className= "font-medium bg-gray-700 md:gap-4 lg:flex hidden text-red-500">
+            <ul className= "font-medium bg-gray-700 lg:gap-4 lg:justify-center  lg:mr-10 lg:items-center lg:flex hidden text-red-500">
                {navLink.map(link => (
                 <Link href={link.href} key={link.key}  className="md:font-lg cursor-pointer items-center md:hover:font-bold  transition-all">
                     {link.label}
                 </Link>
              ))}
-
-            </ul>
-             <div className="lg:flex hidden">
+               <div className="lg:flex hidden">
                 <Link href='#conatct'>
                 <Button
                  type = "button"
@@ -59,6 +61,9 @@ const Navbar = () => {
                 />
                 </Link>
              </div>
+
+            </ul>
+             
         </nav>
     
   )
