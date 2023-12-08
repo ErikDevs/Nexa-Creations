@@ -44,10 +44,10 @@ const Hero = () => {
               <AddchartIcon className="text-red-500 hidden md:flex" />
               <h3 className="md:text-left md:ml-2">Welcome to Nexa Creative Digital Solutions</h3>
             </div>
-            <h1 className="text-4xl md:text-5xl  text-center md:text-left leading-25 font-extrabold text-gray-700  font-marriWeather mt-4">We offer Digital Marketing & Graphic Design Solutions</h1>
+            <h1 className="text-4xl md:text-6xl  text-center md:text-left leading-loose font-extrabold text-gray-700  font-marriWeather mt-4">We offer Digital Marketing & Graphic Design Solutions</h1>
             <div className="grid grid-flow-col mt-4 md:grid-rows-2 grid-rows-3 gap-2">
           {services.map(service => (
-            <Link href={service.href} key={service.key} className="bg-gray-700 text-white text-center md:text-left text-sm px-2 py-3">{service.label}</Link>
+            <Link href={service.href} key={service.key} className="bg-gray-700 text-white text-center md:text-left  text-sm px-3 py-5">{service.label}</Link>
           ))}
         </div>
         <h3 className="mt-10 md:text-left text-center">Join us in unlocking your business full potential and be the best in your niche!</h3>

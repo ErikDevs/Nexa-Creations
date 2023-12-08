@@ -11,32 +11,34 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 const Footer = () => {
   return (
-    <div className='bg-gray-700 py-20 mt-20 relative text-white'>
-          <div className='lg:flex mx-[10%]'>
-          <Image src={mediaImage} className="lg:w-[30%] border-4 mb-2 border-white drop-shadow-lg lg:absolute z-10" alt="flyer" />
-            <div className="bg-white -rotate-6 md:flex hidden md:w-[37%]"></div>
+    <div className='bg-gray-700 py-8 px-[10%] lg:mt-20 relative text-white'>
+          <div className='lg:flex'>
+            <Image src={mediaImage} width={400}  className=" border-4 mb-2 border-white drop-shadow-lg" alt="flyer" />
             <div className="flex-col ml-10">
               <div className="flex mb-5">
                 <AttachEmailIcon className="text-red-500" />
                 <h3 className="ml-2"> Contact Us</h3>
               </div>
-            <h1 className="text-4xl md:leading-normal font-bold">Have Project in Mind? <br />Contact us Now & Let's <br />Work Together</h1>
-            <p className="text-md mt-10">We are ready to create a digital transformation <br /> for your brand. Let’s connect</p>
+            <h1 className="text-4xl md:leading-normal font-bold">Have Project in Mind? <br /> Contact us Now & Let's Work Together</h1>
+            <p className="text-md mt-10">We are ready to create a digital transformation for your brand. Let’s connect</p>
             <Link href='https://api.whatsapp.com/send?phone=+254797710074&text=Hello%20Welcome%20to%20Nexa%20Creation,%20We%20are%20the%20leading%20digital%20services%20agency%20ranging%20from,%20Graphic%20design,%20web%20application%20and%20websites,%20Social%20Media%20Marketing%20and%20Social%20Media%20management'>
             <Button 
-             icon = {<WhatsApp />} 
+             icon = { <WhatsApp /> } 
              title= "WhatsApp Us" 
             type= "butto"
             variant="bg-red-500 py-2 mt-12"/>
             </Link>
             </div>
           </div>
-          <div className="lg:flex mx-[10%] justify-center mt-16">
-            <div className="flex-col">
-              <Link href='/'>
-                <Image src={logo} className="w-[50%] ml-0" />
+
+          {/* bottom footer */}
+          <div className="lg:flex relative mt-8">
+            <div className="flex-col mx-20">
+              <Link className="flex justify-start" href='/'>
+                <Image src={logo} width={150} />
               </Link>
-              <h3 className="text-sm flex justify-start leading-relaxed mb-6 mt-6">At Nexa Creations Agency, Our core is to create <br /> digital transformation for your brand.</h3>
+              <h3 className="text-sm flex justify-start leading-relaxed mx-6 my-6">At Nexa Creations Agency, Our core is to create <br /> digital transformation for your brand.</h3>
+              <div className="mx-6 md:static absolute top-4 left-32 ">
               {socialLinks.map(social => (
                 <Link key={social.key} href={social.href}>
                   <i className="ring-2 ring-white text-center rounded-sm px-2  py-2 ml-2" key={social.key}>
@@ -44,8 +46,10 @@ const Footer = () => {
                   </i>
                 </Link>
               ))}
+              </div>
             </div>
-            <div className="flex-col mt-10 ml-12">
+           <div className="grid grid-flow-col grid-rows-2">
+           <div className="flex-col mt-10">
               <h3 className="font-semibold mb-2">Quick Links</h3>
              <ul>
              {navLink.map(link => (
@@ -57,7 +61,18 @@ const Footer = () => {
                 ))}
              </ul>
             </div>
-            <div className="flex-col lg:ml-20 mt-10">
+            
+            
+            <Link href= '#nav'><i className='bg-red-500 rounded-full px-2 py-2 bottom-0 right-12 absolute'><ArrowUpwardIcon className='text-white text-2xl' /></i></Link>
+            <div className="flex-col mt-10 mx-20">
+                <h3 className="font-semibold">Newsletter</h3>
+                {newsLetter.map(letter => (
+                   <h3 className="mt-2 text-sm" key={letter.key}>
+                         {letter.title}
+                   </h3>
+                ))}
+            </div>
+            <div className="flex-col lg:ml-20 ml-6 mt-2">
                   <h3 className="font-semibold mb-2"> Get in touch </h3>
                   {getIntouch.map(contact => (
                          <Link className="flex justify-start items-center" key={contact.key} href={contact.link}>
@@ -66,15 +81,8 @@ const Footer = () => {
                          </Link>
                   ))}
             </div>
-            <Link href= '#nav'><i className='bg-red-500 rounded-full px-2 py-2 top-2 right-12 absolute'><ArrowUpwardIcon className='text-white text-4xl' /></i></Link>
-            <div className="flex-col mt-10 lg:ml-20">
-                <h3 className="font-semibold">Newsletter</h3>
-                {newsLetter.map(letter => (
-                   <h3 className="mt-2 text-sm" key={letter.key}>
-                         {letter.title}
-                   </h3>
-                ))}
-            </div>
+           </div>
+  
           </div>
     </div>
   )

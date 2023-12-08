@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
         <nav id='nav' className='lg:flex bg-gray-700 block items-center md:py-4 lg:h-28 lg:gap-4 lg:justify-center'>
             <Link className='md:flex md:justify-start' href='/'>
-                 <Image src={logo} width={130} alt='logo' />
+                 <Image src={logo} width={150} alt='logo' />
             </Link>
             
             <div className='lg:hidden absolute right-4 top-2'>
