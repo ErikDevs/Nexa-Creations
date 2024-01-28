@@ -1,5 +1,5 @@
 
-const Button = ({type, title, icon, variant}) => {
+const Button = ({type, title, icon, callback, variant}) => {
   return (
     <button 
       type= {type}
@@ -7,7 +7,7 @@ const Button = ({type, title, icon, variant}) => {
       {icon} 
       <label>{title}</label>
     </button>
-  )
+  ) 
 }
 
 export default Button

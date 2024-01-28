@@ -9,25 +9,25 @@ import SegmentIcon from '@mui/icons-material/Segment';
 import CloseIcon from '@mui/icons-material/Close';
 import {motion } from "framer-motion"
 
+
 const Navbar = () => {
-   
-   
+
    const [isOpen, setIsOpen] = useState(false)
    const  variants = {
       open : {opacity: 1, height: "auto"},
       closed: {opacity: 0, height: "0"}
     }
   return (
-        <nav  id='nav' className='lg:flex bg-gray-700 block lg:items-center py-1 md:py-4 lg:h-28 lg:gap-4 '>
+        <nav  id='nav' className='lg:flex justify-center bg-gray-700 block lg:items-center py-1 md:py-4 lg:h-28 lg:gap-4 '>
            
-           <Link className='lg:ml-40 flex justify-start' href='/'>
+           <Link className=' flex justify-start' href='/'>
                  <Image src={logo} width={150} alt='logo' />
             </Link>
 
             <div className='lg:hidden bg-red-500 h-fit px-4 py-5 absolute right-0 bottom-0 top-0'>
             {isOpen ?  (
-               <CloseIcon className='text-white text-4xl ' onClick= {() => setIsOpen(false)} />
-            ): (<SegmentIcon className='text-white text-4xl' onClick={() => setIsOpen(true)} />)}
+               <CloseIcon className='text-white text-6xl ' onClick= {() => setIsOpen(false)} />
+            ): (<SegmentIcon className='text-white text-6xl' onClick={() => setIsOpen(true)} />)}
             </div>
              <motion.ul
             

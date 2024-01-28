@@ -4,7 +4,7 @@ import './globals.css'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import { useState } from 'react'
-import PageLoader from 'next/dist/client/page-loader'
+import Provider from '@/sessionProvider'
 
 
 const sora = Sora({ subsets: ['latin'], weight: [ "100", "200", "300", "400", "500", "600", "700", "800"]})
@@ -25,13 +25,16 @@ export default function RootLayout({ children }) {
   
   return (
     <html lang="en">
-      <body className={sora.className}>
-        {loading ? <div className='flex justify-center min-h-screen m-auto items-center'>
+      <body className={`${sora.className} bg-slate-50`}>
+        {loading ? <div className='flex justify-center bg-slate-300 min-h-screen m-auto items-center'>
         <div className='loader'></div>
         </div> : <>
+          <Provider>
           <Navbar  />
           {children}
           <Footer />  
+          </Provider>
+
           
           </>
         }

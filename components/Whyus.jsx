@@ -35,7 +35,7 @@ const Whyus = () => {
     animate = {control}
     transition={{duration: 1}}
     className='flex mt-10'>
-           <Image src={DigitalImage} className="hidden md:flex" width={800} height={100} alt="banner" />
+           <Image src={DigitalImage} className="hidden md:flex" width={800}  alt="banner" />
            <div className='md:ml-4'>
            <div className="flex"><CardMembershipIcon className="text-red-500 mr-4 text-md" /> <h3>Why Us</h3></div>
             <h1 className="md:text-4xl text-3xl mt-2 font-bold mx-2">

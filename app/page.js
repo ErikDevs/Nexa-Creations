@@ -14,7 +14,6 @@ export default function Home() {
   return (
     <main className="max-w-screen-xl lg:flex lg:justify-center  text-gray-700 mx-auto" >
       <div className="flex-col">
-      
       <Hero />
       <Stickybtn />
       <Counter />

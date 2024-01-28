@@ -6,14 +6,14 @@ import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 import Link from "next/link";
 import logo from '@/public/logo.png'
 import { getIntouch, navLink, newsLetter, socialLinks } from "@/constants/constants";
+import backgroundImage from '@/public/footer.png'
 
 
 
 const Footer = () => {
   return (
-    <div className='bg-gray-700 py-8 lg:mt-20 relative text-white'>
-      
-          <div className='md:flex md:mx-56'>
+    <div className='bg-gray-700 py-8 lg:mt-20 lg:flex flex-wrap lg:justify-center lg:py-44 overflow-hidden relative text-white'>
+            <div className='md:flex md:mx-56'>
             <Image src={mediaImage} width={400}  className="md:mr-10 border-4 mb-2 border-white drop-shadow-lg" alt="flyer" />
             <div className="flex-col px-2">
               <div className="flex mb-5">
@@ -40,11 +40,11 @@ const Footer = () => {
            
         
          
-           <div className="md:flex block px-10 md:px-0  bg-gray-900 py-4 justify-center mt-8">
+           <div className="md:flex flex-wrap block px-0  lg:py-auto lg:px-auto mt-8">
            
            <div className="md:mr-12">
               <Link className="md:flex  justify-start" href='/'>
-                <Image  src={logo} width={150} />
+                <Image className="z-10" src={logo} width={150} />
               </Link>
             </div>
            <div className="flex-col">
@@ -90,7 +90,7 @@ const Footer = () => {
            
            </div>
   
-          
+           <Image className="absolute w-[100%] object-cover bottom-0" src = {backgroundImage}  />
     </div>
   )
 }

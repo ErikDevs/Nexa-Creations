@@ -8,6 +8,7 @@ import AddchartIcon from '@mui/icons-material/Addchart';
 import Button from "./button"
 import { useInView } from "react-intersection-observer"
 import {motion, useAnimation } from "framer-motion"
+import backgroundImage from '@/public/bg.png'
 
 
 const Hero = () => { 
@@ -39,7 +40,7 @@ const Hero = () => {
     initial = "hidden"
     animate = {control}
     transition={{duration: 0.5}}
-    className='md:flex md:items-center mx-2'>
+    className='md:flex md:items-center mx-2 bg-image'>
     
         <div className='flex-col mt-5'>
             <div className="flex items-center">
@@ -74,9 +75,10 @@ const Hero = () => {
         <div className='lg:flex w-[100%] h-[100%] hidden'>
             <Image src={heroPhoto} className="w-[100%]" alt="hero-photo"/>
         </div>
+        <Image className="-z-10 absolute top-0 opacity-5 " src={backgroundImage} width={800} />
         <div>
         
-            
+           
 
         </div>
     </motion.div>
