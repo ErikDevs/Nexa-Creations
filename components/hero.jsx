@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { integralCf } from "@/app/fonts/fonts";
-import { Button } from "@/components";
 import { useInView } from "react-intersection-observer";
+import Button from "./Button";
 
 const Hero = () => {
   const [ref, inView] = useInView({

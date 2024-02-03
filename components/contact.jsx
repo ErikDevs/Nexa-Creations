@@ -4,7 +4,7 @@ import { FaLocationPinLock } from "react-icons/fa6";
 import { FaMailBulk } from "react-icons/fa";
 import { MdWifiCalling3 } from "react-icons/md";
 import { BiLogoInstagramAlt } from "react-icons/bi";
-import { Button } from "@/components";
+import Button from "./Button";
 
 const Contact = () => {
   return (
