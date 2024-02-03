@@ -11,7 +11,6 @@ import {
 
 export default function Home() {
   return (
-    <main className="">
       <div className="flex-col m-auto">
         <Hero />
         <AboutUs />
@@ -22,6 +21,5 @@ export default function Home() {
         <Testimonials />
         <Contact />
       </div>
-    </main>
   );
 }

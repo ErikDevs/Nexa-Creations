@@ -1,6 +1,8 @@
 import "./globals.css";
 import { monstserrat } from "./fonts/fonts";
-import { Footer, Navbar } from "@/components";
+import Navbar from "@/components/Navbar";
+import { Footer } from "@/components";
+
 
 export const metadata = {
   title: "Nexa Creation",
