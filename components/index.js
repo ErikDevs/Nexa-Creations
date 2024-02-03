@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 import Hero from "./Hero";
 import AboutUs from "./AboutUs";
 import Button from "./Button";
@@ -11,7 +10,6 @@ import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 
 export {
-  Navbar,
   Hero,
   AboutUs,
   Button,
@@ -21,5 +19,5 @@ export {
   WhyChooseUs,
   Projects,
   Testimonials,
-  Contact
+  Contact,
 };
