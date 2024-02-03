@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import man from "../public/man.jpg";
+import man from "../../public/man.jpg";
 import { integralCf } from "@/app/fonts/fonts";
 import { testmonials } from "@/constants/constants";
 

@@ -2,9 +2,9 @@
 import { integralCf } from "@/app/fonts/fonts";
 import Image from "next/image";
 import React, { useRef } from "react";
-import design from "../public/design.png";
+import design from "../../public/design.png";
 import { useInView } from "react-intersection-observer";
-import hasBg from "../public/hasBg.png";
+import hasBg from "../../public/hasBg.png";
 
 const WhyChooseUs = () => {
   const [ref, inView] = useInView({

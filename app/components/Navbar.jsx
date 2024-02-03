@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { dayOne } from "@/app/fonts/fonts";
 import Image from "next/image";
-import logo from "../public/logo.png";
+import logo from "../../public/logo.png";
 import Link from "next/link";
 import { navLink } from "@/constants/constants";
 import { Instagram, Facebook, LinkedIn } from "@mui/icons-material";

@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import Image from "next/image";
-import binoculas from "../public/visual-reality.png";
+import binoculas from "../../public/visual-reality.png";
 import { integralCf } from "@/app/fonts/fonts";
 import { useInView } from "react-intersection-observer";
 

@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import Image from "next/image";
-import Woman from "../public/woman.png";
+import Woman from "../../public/woman.png";
 import { integralCf } from "@/app/fonts/fonts";
 import { useInView } from "react-intersection-observer";
 

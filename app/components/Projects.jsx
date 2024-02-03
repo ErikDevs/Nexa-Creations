@@ -1,17 +1,17 @@
 "use client";
 import { integralCf } from "@/app/fonts/fonts";
 import Image from "next/image";
-import projectOne from "../public/projectOne.jpg";
-import Fish_logo from "../public/fish_logo.png";
-import Bag from "../public/paper.jpg";
-import project3 from "../public/project3.jpg";
+import project1 from "../../public/projectOne.jpg";
+import Fish_logo from "../../public/fish_logo.png";
+import Bag from "../../public/paper.jpg";
+import project3 from "../../public/project3.jpg";
 import { useInView } from "react-intersection-observer";
 import { useRef } from "react";
 
 const Projects = () => {
   const [ref, inView] = useInView({
     threshold: 0,
-  }); 
+  });
   const animatedElementRef = useRef(null);
   return (
     <div className="text-white w-full px-[10%]">
@@ -29,7 +29,7 @@ const Projects = () => {
               className={`object-scale-down ${
                 inView ? "animation-left" : ""
               } zoom`}
-              src={projectOne}
+              src={project1}
               ref={(el) => {
                 ref(el);
                 animatedElementRef.current = el;

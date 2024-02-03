@@ -2,7 +2,7 @@
 import { integralCf } from "@/app/fonts/fonts";
 import React, { useRef } from "react";
 import Image from "next/image";
-import drone from "../public/drone.png";
+import Drone from "../../public/drone.png";
 import { useInView } from "react-intersection-observer";
 
 const Ourphilosophy = () => {
@@ -35,7 +35,7 @@ const Ourphilosophy = () => {
       <div className="w-3/4">
         <Image
           className={`${inView ? "animation-left" : ""}`}
-          src={drone}
+          src={Drone}
           ref={(el) => {
             ref(el);
             animatedElementRef.current = el;
