@@ -1,11 +1,11 @@
-import AboutUs from "./components/AboutUs";
-import Contact from "./components/Contact";
-import Hero from "./components/Hero";
-import Introduction from "./components/Introduction";
-import Ourphilosophy from "./components/Ourphilosophy";
-import Projects from "./components/Projects";
-import Testimonials from "./components/Testimonials";
-import WhyChooseUs from "./components/WhyChooseUs";
+import AboutUs from "./components/aboutus";
+import Contact from "./components/contactus";
+import Hero from "./components/hero";
+import Introduction from "./components/introduction";
+import Ourphilosophy from "./components/ourphilosophy";
+import Projects from "./components/projects";
+import Testimonials from "./components/testimonials";
+import WhyChooseUs from "./components/whyChooseUs";
 
 export default function Home() {
   return (
