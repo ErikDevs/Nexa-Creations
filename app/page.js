@@ -2,9 +2,9 @@ import AboutUs from "./components/us";
 import Contact from "./components/form";
 import Hero from "./components/landingPage";
 import Introduction from "./components/whoarewe";
-import Ourphilosophy from "./components/ourphilosophy";
+import Ourphilosophy from "./components/whatwebelieve";
 import Projects from "./components/doing";
-import Testimonials from "./components/testimonials";
+import Testimonials from "./components/whatclientssay";
 import WhyChooseUs from "./components/why";
 
 export default function Home() {
