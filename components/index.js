@@ -1,23 +1,9 @@
-import Hero from "./Hero";
-import AboutUs from "./AboutUs";
-import Button from "./Button";
-import Introduction from "./Introduction";
-import Footer from "./Footer";
-import Ourphilosophy from "./Ourphilosophy";
-import WhyChooseUs from "./WhyChooseUs";
-import Projects from "./Projects";
-import Testimonials from "./Testimonials";
-import Contact from "./Contact";
-
-export {
-  Hero,
-  AboutUs,
-  Button,
-  Introduction,
-  Footer,
-  Ourphilosophy,
-  WhyChooseUs,
-  Projects,
-  Testimonials,
-  Contact,
-};
+export { default as Hero } from "./Hero";
+export { default as Button } from "./Button";
+export { default as Contact } from "./Contact";
+export { default as Introduction } from "./Introduction";
+export { default as Ourphilosophy } from "./Ourphilosophy";
+export { default as Projects } from "./Projects";
+export { default as Testimonials } from "./Testimonials";
+export { default as WhyChooseUs } from "./WhyChooseUs";
+export { default as AboutUs } from "./AboutUs";
