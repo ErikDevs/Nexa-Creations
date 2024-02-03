@@ -25,14 +25,6 @@
   transform-origin: bottom left;
 }
 
-footer {
-  background-image: url("../public/clouds.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-}
-
 .zoom,
 .animation-left,
 .animation-top,
