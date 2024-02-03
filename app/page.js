@@ -7,19 +7,19 @@ import {
   Projects,
   Testimonials,
   WhyChooseUs,
-} from "@/components";
+} from "../components/index";
 
 export default function Home() {
   return (
-      <div className="flex-col m-auto">
-        <Hero />
-        <AboutUs />
-        <Introduction />
-        <Ourphilosophy />
-        <WhyChooseUs />
-        <Projects />
-        <Testimonials />
-        <Contact />
-      </div>
+    <div className="flex-col m-auto">
+      <Hero />
+      <AboutUs />
+      <Introduction />
+      <Ourphilosophy />
+      <WhyChooseUs />
+      <Projects />
+      <Testimonials />
+      <Contact />
+    </div>
   );
 }

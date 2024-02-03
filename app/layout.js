@@ -3,7 +3,6 @@ import { monstserrat } from "./fonts/fonts";
 import Navbar from "@/components/Navbar";
 import { Footer } from "@/components";
 
-
 export const metadata = {
   title: "Nexa Creation",
   description: "Website to showcase our services",
