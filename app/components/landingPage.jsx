@@ -2,7 +2,7 @@
 import React from "react";
 import { integralCf } from "@/app/fonts/fonts";
 import { useInView } from "react-intersection-observer";
-import Button from "./button";
+import Button from "./one";
 
 const Hero = () => {
   const [ref, inView] = useInView({
