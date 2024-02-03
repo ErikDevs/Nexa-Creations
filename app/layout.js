@@ -1,12 +1,6 @@
-import { Sora } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
-
-const sora = Sora({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-});
+import { monstserrat } from "./fonts/fonts";
+import { Footer, Navbar } from "@/components";
 
 export const metadata = {
   title: "Nexa Creation",
@@ -16,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${sora.className} bg-slate-50`}>
+      <body className={`${monstserrat.className} body bg-gray-900`}>
         <Navbar />
         {children}
         <Footer />

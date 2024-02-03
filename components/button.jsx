@@ -1,13 +1,13 @@
+import React from "react";
 
-const Button = ({type, title, icon, callback, variant}) => {
+const Button = ({ name, className }) => {
   return (
-    <button 
-      type= {type}
-      className={`flex gap-3 cursor-pointer rounded-md px-5 py-2 border-2 border-red-500 ${variant}`}>
-      {icon} 
-      <label>{title}</label>
+    <button
+      className={`${className} rounded-lg text-white flex justify-start items-center h-12`}
+    >
+      {name}
     </button>
-  ) 
-}
+  );
+};
 
-export default Button
+export default Button;

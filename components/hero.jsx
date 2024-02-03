@@ -1,88 +1,32 @@
-"use client"
-import Link from "next/link"
-import Image from "next/image"
-import { useEffect } from "react"
-import heroPhoto from '../public/20945379.jpg'
-import { callToAction, services } from "@/constants/constants"
-import AddchartIcon from '@mui/icons-material/Addchart';
-import Button from "./button"
-import { useInView } from "react-intersection-observer"
-import {motion, useAnimation } from "framer-motion"
-import backgroundImage from '@/public/bg.png'
+"use client";
+import React from "react";
+import { integralCf } from "@/app/fonts/fonts";
+import { Button } from ".";
+import { useInView } from "react-intersection-observer";
 
-
-const Hero = () => { 
-
-  const heroVariant = {
-     visible: {opacity: 1, y: 50},
-     hidden : {opacity: 0, y: 0}
-  }
-  const control = useAnimation()
-  const [ref, inView] = useInView(
-    {
-      triggerOnce: false,
-    }
-  )
-
-  useEffect(() => {
-    if(inView) {
-      control.start("visible")
-      control.start("height")
-    } else {
-      control.start("hidden")
-    }
-  }, [control, inView]);
+const Hero = () => {
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
 
   return (
-    <motion.div
-    ref={ref}
-    variants={heroVariant}
-    initial = "hidden"
-    animate = {control}
-    transition={{duration: 0.5}}
-    className='md:flex md:items-center mx-2 bg-image'>
-    
-        <div className='flex-col mt-5'>
-            <div className="flex items-center">
-              <AddchartIcon className="text-red-500 hidden md:flex" />
-              <h3 className="md:text-left md:ml-2">Welcome to Nexa Creative Digital Solutions</h3>
-            </div>
-            <h1 
-            className="text-4xl md:text-6xl  text-left md:text-left font-extrabold
-             text-gray-700 font-marriWeather mt-4">
-              We offer Digital Marketing & Graphic Design Solutions
-            </h1>
-            <div className="grid grid-flow-col mt-4 md:grid-rows-2 grid-rows-3 gap-2">
-          {services.map(service => (
-            <Link href={service.href} key={service.key} 
-              className="bg-gray-700 text-white text-center md:text-left text-sm px-2 lg:px-5 py-5">
-              {service.label}
-            </Link>
-          ))}
+    <div className="px-[10%] h-screen items-center flex">
+      <div className="flex-col items-center">
+        <div ref={ref} className={`${inView ? "animation-top" : ""} w-1/2 `}>
+          <h1
+            className={`${integralCf.className} text-white text-6xl tracking-wide`}
+          >
+            Transforming Ideas into Visual masterpieces
+          </h1>
+          <p className="text-white text-xl mt-10">
+            Crafting Unique and Engaging Digital Experiences
+          </p>
         </div>
-        <h3 className="mt-10 md:text-left text-center">Join us in unlocking your business full potential and be the best in your niche!</h3>
-        <div className="flex justify-center md:justify-start gap-2 mt-4">
-         {callToAction.map(action => (
-           <Link key={action.title} href={action.href}>
-             <Button
-               title={action.title}
-               type="button"
-               variant= {action.variant}/>
-           </Link>
-         ))}
-        </div>
-        </div>
-        <div className='lg:flex w-[100%] h-[100%] hidden'>
-            <Image src={heroPhoto} className="w-[100%]" alt="hero-photo"/>
-        </div>
-        <Image className="-z-10 absolute top-0 opacity-5 " src={backgroundImage} width={800} />
-        <div>
-        
-           
+        <Button className="mt-6 text-xl font-normal" name="GET IN TOUCH" />
+        <hr className="w-32 bg-purple-500 border-none h-[2px]" />
+      </div>
+    </div>
+  );
+};
 
-        </div>
-    </motion.div>
-  )
-}
-
-export default Hero
+export default Hero;

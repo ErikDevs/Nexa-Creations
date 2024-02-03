@@ -2,25 +2,131 @@
 @tailwind components;
 @tailwind utilities;
 
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
 
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #a755f6;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
 
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
-.loader {
-    border: 0.5rem solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 0.5rem solid #ef4444;
-    width: 80px;
-    height: 80px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
+footer {
+  background-image: url("../public/clouds.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.zoom,
+.animation-left,
+.animation-top,
+.animation-right,
+.animation-bottom {
+  transition-property: transform, opacity;
+  transition-duration: 3s;
+}
+
+.animation-top {
+  animation: animate-top 2s ease-in-out;
+}
+
+.animation-left {
+  animation: animate-left 2s ease-in-out;
+}
+
+.animation-right {
+  animation: animate-right 2s ease-in-out;
+}
+
+.animation-bottom {
+  animation: animate-bottom 2s ease-in-out;
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+}
+
+@keyframes animate-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
   }
 
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+}
+
+@keyframes animate-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
   }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-top {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-bottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.body {
+  background-image: url("../public/home-page.png");
+  background-repeat: no-repeat, repeat;
+  background-position: top;
+  background-size: cover;
+  height: 100vh;
+}
+
+.background {
+  background-image: url("../public/contactbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  background-color: #151d34;
+  opacity: 0.6;
+  height: 100%;
+  width: 100%;
+}

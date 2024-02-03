@@ -1,56 +1,76 @@
-"use client"
-import { conatct } from '@/constants/constants'
-import {useInView } from 'react-intersection-observer'
-import {useAnimation, motion } from 'framer-motion'
-import { CheckBox } from '@mui/icons-material'
-import React, {useEffect} from 'react'
+import { integralCf } from "@/app/fonts/fonts";
+import React from "react";
+import { FaLocationPinLock } from "react-icons/fa6";
+import { FaMailBulk } from "react-icons/fa";
+import { MdWifiCalling3 } from "react-icons/md";
+import { BiLogoInstagramAlt } from "react-icons/bi";
+import { Button } from ".";
 
 const Contact = () => {
-
-  const priceVariant = {
-    visible: {opacity: 1, y: 0},
-    hidden : {opacity: 0, y: 50}
- }
-
- const control = useAnimation()
- const [ref, inView] = useInView()
-
- useEffect(() => {
-   if(inView) {
-     control.start("visible")
-     control.start("height")
-   } else {
-     control.start("hidden")
-   }
- }, [control, inView]);
-
   return (
-    <motion.div
-    ref={ref}
-    variants={priceVariant}
-    initial = "hidden"
-    animate = {control}
-    transition={{duration: 1}}
-    id='contact' className='flex mt-16 items-center justify-center'>
-        <div className='flex-col'>
-            <div className='flex justify-center'>
-            <CheckBox className='text-red-500 text-md mr-2'/>
-            <h3 className='text-center'>Get in Touch with us</h3>
-            </div>
-            <h1 className='text-4xl text-center font-bold mt-4'>Contact Us Today</h1>
-            <div className='md:flex justify-left mt-10'>
-            {conatct.map(contactInfo => (
-                <div key={contactInfo.key} className='flex p-10 hover:bg-white md:justify-center items-center hover:drop-shadow-lg'>
-                    <i className='mr-2 bg-blue-600 rounded-lg px-2 py-2'>{contactInfo.icon}</i>
-                    <h3 className='text-lg'>{contactInfo.name}</h3>
-                </div>
-            ))}
-            </div>
-            
-     </div>
-       
-    </motion.div>
-  )
-}
+    <div className="px-[10%] background flex flex-col h-screen justify-center items-center mt-20">
+      <h1
+        className={`text-white z-10 ${integralCf.className} text-5xl tracking-wider`}
+      >
+        Contact Us Today
+      </h1>
+      <div className="bg-white flex z-10  relative mt-10 rounded-lg w-1/2 h-3/4">
+        <div className="absolute px-4 text-white flex flex-col justify-center text-lg rounded-lg bg-pink-700 h-3/4 w-1/2 top-16 -left-36">
+          <h1 className="text-2xl mb-4 font-bold">Contact Us</h1>
+          <div className="flex items-center gap-4 mt-4">
+            <FaLocationPinLock style={{ fontSize: "1rem" }} />
+            <span>
+              <h2>Thika Makongeni</h2>
+            </span>
+          </div>
+          <div className="flex items-center gap-4 mt-4">
+            <FaMailBulk style={{ fontSize: "1.5rem" }} />
+            <span>
+              <h2>info@nexacreative.com</h2>
+            </span>
+          </div>
+          <div className="flex items-center gap-4 mt-4">
+            <MdWifiCalling3 style={{ fontSize: "1.5rem" }} />
+            <span>
+              <h2>0797 710074</h2>
+            </span>
+          </div>
+          <div className="flex items-center gap-4 mt-4">
+            <BiLogoInstagramAlt style={{ fontSize: "1.5rem" }} />
+            <span>
+              <h2>@nexacreative</h2>
+            </span>
+          </div>
+        </div>
+        <div className="w-1/2 absolute  right-20 flex justify-center items-center top-20">
+          <form className="flex flex-col" action="">
+            <input
+              className="rounded-lg h-8 px-4 placeholder:text-gray-400 placeholder:font-semibold bg-gray-300 mt-4"
+              type="text"
+              placeholder="Your Name"
+            />
+            <input
+              type="text"
+              className="rounded-lg h-8 px-4 placeholder:text-gray-400 placeholder:font-semibold bg-gray-300 mt-4"
+              placeholder="Your Email"
+            />
+            <textarea
+              name=""
+              className="rounded-lg px-4 placeholder:text-gray-400 placeholder:font-semibold bg-gray-300 mt-4"
+              placeholder="Type your message here"
+              id=""
+              cols="30"
+              rows="10"
+            ></textarea>
+            <Button
+              name="SEND"
+              className="bg-pink-700 flex justify-center items-center font-semibold w-1/2 mt-4 rounded-xl"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default Contact
+export default Contact;
