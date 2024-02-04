@@ -1,4 +1,4 @@
-import { Days_One, Montserrat } from "next/font/google";
+import { Days_One, Montserrat, News_Cycle } from "next/font/google";
 import localFont from "next/font/local";
 
 const dayOne = Days_One({
@@ -11,6 +11,11 @@ const monstserrat = Montserrat({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
+const news = News_Cycle({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
 const integralCf = localFont({
   src: [
     {
@@ -19,4 +24,4 @@ const integralCf = localFont({
     },
   ],
 });
-export { dayOne, integralCf, monstserrat };
+export { dayOne, integralCf, monstserrat, news };

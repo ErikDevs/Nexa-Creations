@@ -11,17 +11,15 @@ const Ourphilosophy = () => {
   });
   const animatedElementRef = useRef(null);
   return (
-    <div className="text-white flex-col md:px-[10%] px-4 h-screen w-full justify-center items-center md:flex">
+    <div className="text-white flex-col px-4 h-screen w-full justify-center items-center">
       <div
-        className={`${
-          inView ? "animation-right" : ""
-        } flex flex-col w-full  md:w-1/2`}
+        className={`${inView ? "animation-right" : ""} flex flex-col w-full`}
         ref={(el) => {
           ref(el);
           animatedElementRef.current = el;
         }}
       >
-        <h1 className={`${integralCf.className} text-5xl tracking-wider`}>
+        <h1 className={`${integralCf.className} text-4xl tracking-wider`}>
           Our Design Philosophy
         </h1>
         <p className={`mt-10 text-xl leading-relaxed`}>
@@ -36,7 +34,7 @@ const Ourphilosophy = () => {
       </div>
       <div className="w-3/4">
         <Image
-          className={`${inView ? "animation-left" : ""}`}
+          className={`${inView ? "animation-left" : ""} hidden`}
           src={Drone}
           ref={(el) => {
             ref(el);

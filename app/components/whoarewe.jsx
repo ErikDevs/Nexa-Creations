@@ -11,11 +11,11 @@ const Introduction = () => {
   });
   const animatedElementRef = useRef(null);
   return (
-    <div className="text-white h-screen flex">
-      <div className="md:px-[10%] px-4 flex-col md:flex">
+    <div className="text-white h-screen flex flex-col">
+      <div className="px-4">
         <div className="w-3/4">
           <Image
-            className={`${inView ? "animation-bottom" : ""}`}
+            className={`${inView ? "animation-bottom" : ""} hidden`}
             src={binoculas}
             ref={(el) => {
               ref(el);
@@ -26,17 +26,17 @@ const Introduction = () => {
         <div
           className={`${
             inView ? "animation-right" : ""
-          } w-full md:w-1/2 flex flex-col justify-center`}
+          } w-full flex flex-col justify-center`}
           ref={(el) => {
             ref(el);
             animatedElementRef.current = el;
           }}
         >
-          <h1 className={`${integralCf.className} text-5xl tracking-wider`}>
+          <h1 className={`${integralCf.className} text-4xl tracking-wider`}>
             About Us
           </h1>
           <h2
-            className={`${integralCf.className} text-2xl mt-10 tracking-widest`}
+            className={`${integralCf.className} text-xl mt-10 tracking-widest`}
           >
             Unleashing Creativity, Igniting Digital Experiences
           </h2>

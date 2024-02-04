@@ -36,26 +36,22 @@ const Navbar = () => {
         } md:h-20 md:px-[10%] md:sticky md:top-0 h-16 px-4`}
       >
         <nav
-          className={`${dayOne.className} text-white relative justify-between flex items-center`}
+          className={`${dayOne.className} text-white relative justify-end flex items-center`}
         >
-          {isOpen ? (
-            <button
-              className="absolute lg:hidden"
-              onClick={() => setIsOpen(false)}
-            >
-              <TfiClose style={{ fontSize: "1.5rem" }} />
-            </button>
-          ) : (
-            <button
-              className="absolute lg:hidden"
-              onClick={() => setIsOpen(true)}
-            >
-              <TfiAlignJustify style={{ fontSize: "1.5rem" }} />
-            </button>
-          )}
+          <div className="absolute left-0 top-4">
+            {isOpen ? (
+              <button onClick={() => setIsOpen(false)}>
+                <TfiClose style={{ fontSize: "1.5rem" }} />
+              </button>
+            ) : (
+              <button onClick={() => setIsOpen(true)}>
+                <TfiAlignJustify style={{ fontSize: "1.5rem" }} />
+              </button>
+            )}
+          </div>
 
           <Link className="ml-20 lg:ml-0" href="/">
-            <Image className="md:w-60 w-48" src={logo}></Image>
+            <Image className="w-48" src={logo}></Image>
           </Link>
 
           {isOpen && (
@@ -91,13 +87,14 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="flex gap-8">
+          <div className=" hidden md:flex gap-8">
             <Instagram />
             <Facebook />
             <LinkedIn />
           </div>
         </nav>
       </div>
+      <hr className="bg-purple-500 border-none h-[2px] w-full" />
     </>
   );
 };

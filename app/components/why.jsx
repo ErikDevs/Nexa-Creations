@@ -13,14 +13,14 @@ const WhyChooseUs = () => {
   const animatedElementRef = useRef(null);
 
   return (
-    <div className="text-white relative hasBg md:px-[10%] px-10 flex-col md:flex items-center">
+    <div className="text-white relative h-screen hasBg px-10 flex-col items-center">
       <Image
         className="absolute h-screen opacity-5 w-full -z-10 right-0"
         src={hasBg}
       />
       <div className="md:w-3/4 w-full">
         <Image
-          className={`${inView ? "animation-bottom" : ""}`}
+          className={`${inView ? "animation-bottom" : ""} hidden`}
           src={design}
           ref={(el) => {
             ref(el);
@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
           animatedElementRef.current = el;
         }}
       >
-        <h1 className={`${integralCf.className} text-5xl tracking-wider`}>
+        <h1 className={`${integralCf.className} text-4xl tracking-wider`}>
           Why Choose Nexa Creatives
         </h1>
         <ol

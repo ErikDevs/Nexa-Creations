@@ -11,13 +11,9 @@ const AboutUs = () => {
   });
   const animatedElementRef = useRef(null);
   return (
-    <div className="lg:px-[10%] px-4 lg:flex flex-col items-center">
-      <div
-        className={`${
-          inView ? "animation-bottom" : ""
-        } md:w-1/2 w-full text-white`}
-      >
-        <h1 className={`${integralCf.className} tracking-wider text-5xl`}>
+    <div className="px-4 flex flex-col h-screen justify-center items-center">
+      <div className={`${inView ? "animation-bottom" : ""} w-full  text-white`}>
+        <h1 className={`${integralCf.className} tracking-wider text-4xl`}>
           Where Vision Meets Innovation
         </h1>
         <p className="mt-10 text-xl leading-relaxed">
@@ -29,7 +25,7 @@ const AboutUs = () => {
       </div>
       <div className="w-3/4">
         <Image
-          className={`${inView ? "animation-right" : ""}`}
+          className={`${inView ? "animation-right" : ""} absolute hidden`}
           src={Woman}
           ref={(el) => {
             ref(el);

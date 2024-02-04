@@ -18,12 +18,12 @@ const Projects = () => {
       <div className="flex flex-col">
         <div>
           <h1
-            className={`${integralCf.className} text-center text-5xl tracking-wider`}
+            className={`${integralCf.className} text-center text-4xl tracking-wider`}
           >
             Our latest Projects
           </h1>
         </div>
-        <div className="mt-10 grid grid-rows-2 grid-flow-col gap-4">
+        <div className="mt-10 grid grid-rows-2  grid-cols-1 gap-4">
           <div className="w-auto mt-10">
             <Image
               className={`object-scale-down ${

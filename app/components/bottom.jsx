@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className="h-[1px]" />
-      <p className="h-16 px-[10%] text-white text-sm flex justify-start items-center">
+      <p className="h-16 px-[10%] text-white text-xs flex justify-start items-center">
         Copyright@2024nexacreations All rights reserves.
       </p>
     </div>

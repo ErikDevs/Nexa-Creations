@@ -128,14 +128,6 @@
   }
 }
 
-.body {
-  background-image: url("../public/home-page.png");
-  background-repeat: no-repeat, repeat;
-  background-position: top;
-  background-size: cover;
-  height: 100vh;
-}
-
 .background {
   background-image: url("../public/contactbg.jpg");
   background-repeat: no-repeat;
