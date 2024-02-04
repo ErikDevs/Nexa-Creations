@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex md:flex-1 flex-col">
           <Image className="w-56" src={logo} />
           <p className="text-lg mt-5">Transform Your Business With Us</p>
-          <div className="flex justify-start items-center gap-4">
+          <div className="flex justify-start items-center mt-2 gap-4">
             <p>Follow Us:</p>
             <BsInstagram />
             <BiLogoFacebook />
@@ -22,19 +22,27 @@ const Footer = () => {
             <FaBehance />
           </div>
         </div>
-        <div className="flex flex-col mr-20">
-          <h2>Quick Links</h2>
-          <Link href="">Home</Link>
-          <Link href="">Services</Link>
-          <Link href="">About Us</Link>
-          <Link href="">Contact</Link>
+        <div className="flex flex-col mt-4">
+          <h2 className="font-bold mb-2">Quick Links</h2>
+          <Link className="leading-relaxed" href="">
+            Home
+          </Link>
+          <Link className="leading-relaxed" href="">
+            Services
+          </Link>
+          <Link className="leading-relaxed" href="">
+            About Us
+          </Link>
+          <Link className="leading-relaxed" href="">
+            Contact
+          </Link>
         </div>
-        <div className="flex flex-col">
-          <h2>Sevices</h2>
-          <p>Web Development</p>
-          <p>Graphic Design</p>
-          <p>Digital Marketing</p>
-          <p>Branding</p>
+        <div className="flex flex-col mt-4">
+          <h2 className="font-bold mb-2">Sevices</h2>
+          <p className="leading-relaxed">Web Development</p>
+          <p className="leading-relaxed">Graphic Design</p>
+          <p className="leading-relaxed">Digital Marketing</p>
+          <p className="leading-relaxed">Branding</p>
         </div>
       </div>
       <hr className="h-[1px]" />

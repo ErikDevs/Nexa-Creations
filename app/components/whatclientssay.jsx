@@ -26,14 +26,14 @@ const Testimonials = () => {
               </h1>
               <p>{testmony.message}</p>
             </div>
-            <div className="flex gap-6 mt-4 items-center">
+            <div className="flex gap-6  w-full mt-4 items-center">
               <Image
                 className="rounded-full ring-2 h-16 w-16 ring-white"
                 src={man}
               />
               <div className="flex flex-col">
                 <h2 className="font-bold">{testmony.name}</h2>
-                <p className="text-sm">{testmony.destignation}</p>
+                <p className="text-xs">{testmony.destignation}</p>
               </div>
             </div>
           </div>
