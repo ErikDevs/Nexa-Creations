@@ -10,11 +10,14 @@ const Hero = () => {
   });
 
   return (
-    <div className="px-[10%] h-screen items-center flex">
-      <div className="flex-col items-center">
-        <div ref={ref} className={`${inView ? "animation-top" : ""} w-1/2 `}>
+    <div className="md:px-[10%] px-4 h-screen items-center flex">
+      <div className="flex-col md:items-start items-center">
+        <div
+          ref={ref}
+          className={`${inView ? "animation-top" : ""} md:w-1/2 w-full`}
+        >
           <h1
-            className={`${integralCf.className} text-white text-6xl tracking-wide`}
+            className={`${integralCf.className} text-white md:text-6xl text-4xl tracking-wide`}
           >
             Transforming Ideas into Visual masterpieces
           </h1>

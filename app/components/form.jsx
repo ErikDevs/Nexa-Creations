@@ -14,8 +14,8 @@ const Contact = () => {
       >
         Contact Us Today
       </h1>
-      <div className="bg-white flex z-10  relative mt-10 rounded-lg w-1/2 h-3/4">
-        <div className="absolute px-4 text-white flex flex-col justify-center text-lg rounded-lg bg-pink-700 h-3/4 w-1/2 top-16 -left-36">
+      <div className="md:bg-white bg-transparent flex-col md:flex z-10 justify-center items-center  relative  mt-10 rounded-lg w-full  md:w-1/2 h-3/4">
+        <div className="md:absolute static px-4 text-white flex flex-col justify-center text-lg rounded-lg bg-pink-700 h-3/4 md:w-1/2 w-full  top-16  -left-36">
           <h1 className="text-2xl mb-4 font-bold">Contact Us</h1>
           <div className="flex items-center gap-4 mt-4">
             <FaLocationPinLock style={{ fontSize: "1rem" }} />
@@ -42,8 +42,8 @@ const Contact = () => {
             </span>
           </div>
         </div>
-        <div className="w-1/2 absolute  right-20 flex justify-center items-center top-20">
-          <form className="flex flex-col" action="">
+        <div className="md:w-1/2 w-full px-10 md:absolute static right-20 flex justify-center items-center top-20">
+          <form className="flex flex-col w-full" action="">
             <input
               className="rounded-lg h-8 px-4 placeholder:text-gray-400 placeholder:font-semibold bg-gray-300 mt-4"
               type="text"

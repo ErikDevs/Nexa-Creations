@@ -13,12 +13,12 @@ const WhyChooseUs = () => {
   const animatedElementRef = useRef(null);
 
   return (
-    <div className="text-white relative hasBg px-[10%] flex items-center">
+    <div className="text-white relative hasBg md:px-[10%] px-10 flex-col md:flex items-center">
       <Image
         className="absolute h-screen opacity-5 w-full -z-10 right-0"
         src={hasBg}
       />
-      <div className="w-3/4">
+      <div className="md:w-3/4 w-full">
         <Image
           className={`${inView ? "animation-bottom" : ""}`}
           src={design}
@@ -29,7 +29,9 @@ const WhyChooseUs = () => {
         />
       </div>
       <div
-        className={`${inView ? "animation-left" : ""} flex flex-col w-1/2`}
+        className={`${
+          inView ? "animation-left" : ""
+        } flex flex-col w-full md:w-1/2`}
         ref={(el) => {
           ref(el);
           animatedElementRef.current = el;

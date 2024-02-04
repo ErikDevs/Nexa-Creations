@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+.mobile.open {
+  animation: animate-nav 2s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.mobile {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-100%);
+}
+
+@keyframes animated-nav {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .hover-underline-animation {
   display: inline-block;
   position: relative;
@@ -29,9 +55,11 @@
 .animation-left,
 .animation-top,
 .animation-right,
-.animation-bottom {
-  transition-property: transform, opacity;
-  transition-duration: 3s;
+.animation-bottom,
+.mobile {
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-property: transform, opacity, visibility;
 }
 
 .animation-top {

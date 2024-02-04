@@ -12,7 +12,7 @@ const Introduction = () => {
   const animatedElementRef = useRef(null);
   return (
     <div className="text-white h-screen flex">
-      <div className="px-[10%] flex">
+      <div className="md:px-[10%] px-4 flex-col md:flex">
         <div className="w-3/4">
           <Image
             className={`${inView ? "animation-bottom" : ""}`}
@@ -26,7 +26,7 @@ const Introduction = () => {
         <div
           className={`${
             inView ? "animation-right" : ""
-          } w-1/2 flex flex-col justify-center`}
+          } w-full md:w-1/2 flex flex-col justify-center`}
           ref={(el) => {
             ref(el);
             animatedElementRef.current = el;

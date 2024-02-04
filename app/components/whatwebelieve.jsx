@@ -11,9 +11,11 @@ const Ourphilosophy = () => {
   });
   const animatedElementRef = useRef(null);
   return (
-    <div className="text-white px-[10%] h-screen w-full justify-center items-center flex">
+    <div className="text-white flex-col md:px-[10%] px-4 h-screen w-full justify-center items-center md:flex">
       <div
-        className={`${inView ? "animation-right" : ""} flex flex-col w-1/2`}
+        className={`${
+          inView ? "animation-right" : ""
+        } flex flex-col w-full  md:w-1/2`}
         ref={(el) => {
           ref(el);
           animatedElementRef.current = el;

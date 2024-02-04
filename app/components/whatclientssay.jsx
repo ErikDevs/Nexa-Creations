@@ -14,7 +14,7 @@ const Testimonials = () => {
           Client Testmonials
         </h1>
       </div>
-      <div className="grid grid-rows-2 grid-cols-2 mt-10 marquee justify-center gap-8">
+      <div className="grid grid-rows-2 grid-cols-1 md:grid-cols-2 mt-10 marquee justify-center gap-8">
         {testmonials.map((testmony) => (
           <div
             key={testmony.name}

@@ -10,8 +10,8 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="bg-gray-900">
-      <div className="px-[10%] py-20 flex justify-around text-white">
-        <div className="flex flex-1 flex-col">
+      <div className="px-[10%] md:mt-0 mt-60 py-20 md:flex flex-col justify-around text-white">
+        <div className="flex md:flex-1 flex-col">
           <Image className="w-56" src={logo} />
           <p className="text-lg mt-5">Transform Your Business With Us</p>
           <div className="flex justify-start items-center gap-4">
