@@ -11,7 +11,7 @@ const Ourphilosophy = () => {
   });
   const animatedElementRef = useRef(null);
   return (
-    <div className="text-white flex-col px-4 h-screen w-full justify-center items-center">
+    <div className="text-white mt-8 flex-col px-4 w-full justify-center items-center">
       <div
         className={`${inView ? "animation-right" : ""} flex flex-col w-full`}
         ref={(el) => {

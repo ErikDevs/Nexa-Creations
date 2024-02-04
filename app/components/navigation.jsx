@@ -33,7 +33,7 @@ const Navbar = () => {
       <div
         className={`${
           bgColor ? "" : "bg-gray-900"
-        } md:h-20 md:px-[10%] md:sticky md:top-0 h-16 px-4`}
+        } sticky md:top-0 h-16 px-4`}
       >
         <nav
           className={`${dayOne.className} text-white relative justify-end flex items-center`}

@@ -14,7 +14,7 @@ const Projects = () => {
   });
   const animatedElementRef = useRef(null);
   return (
-    <div className="text-white w-full mt-20 md:mt-0 px-[10%]">
+    <div className="text-white mt-16  w-full px-[10%]">
       <div className="flex flex-col">
         <div>
           <h1

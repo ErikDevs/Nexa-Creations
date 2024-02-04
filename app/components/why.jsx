@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
   const animatedElementRef = useRef(null);
 
   return (
-    <div className="text-white relative h-screen hasBg px-10 flex-col items-center">
+    <div className="text-white relative h-screen hasBg px-10 mt-16 flex-col items-center">
       <Image
         className="absolute h-screen opacity-5 w-full -z-10 right-0"
         src={hasBg}

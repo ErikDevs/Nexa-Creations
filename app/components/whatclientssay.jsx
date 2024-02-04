@@ -6,11 +6,9 @@ import { testmonials } from "@/constants/constants";
 
 const Testimonials = () => {
   return (
-    <div className="px-4 mt-20">
+    <div className="px-4">
       <div className="">
-        <h1
-          className={`text-center text-4xl ${integralCf.className} text-white `}
-        >
+        <h1 className={`text-4xl mt-16 ${integralCf.className} text-white `}>
           Client Testmonials
         </h1>
       </div>

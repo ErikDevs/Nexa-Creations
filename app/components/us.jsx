@@ -11,7 +11,7 @@ const AboutUs = () => {
   });
   const animatedElementRef = useRef(null);
   return (
-    <div className="px-4 flex flex-col h-screen justify-center items-center">
+    <div className="px-4 h-screen flex flex-col justify-center items-center">
       <div className={`${inView ? "animation-bottom" : ""} w-full  text-white`}>
         <h1 className={`${integralCf.className} tracking-wider text-4xl`}>
           Where Vision Meets Innovation

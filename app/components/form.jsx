@@ -8,14 +8,14 @@ import Button from "./one";
 
 const Contact = () => {
   return (
-    <div className="px-4 background flex flex-col h-screen justify-center items-center mt-20">
+    <div className="px-4 background flex flex-col  justify-center items-center mt-20">
       <h1
         className={`text-white z-10 ${integralCf.className} text-4xl tracking-wider`}
       >
         Contact Us Today
       </h1>
       <div className="bg-transparent flex-col  z-10 justify-center items-center  relative  mt-10 rounded-lg w-full">
-        <div className="px-4 text-white flex flex-col justify-center text-lg rounded-lg bg-red-500 h-1/2 w-full">
+        <div className="px-4 text-white flex flex-col text-lg rounded-lg py-4 bg-red-500 w-full">
           <h1 className="text-2xl mb-4 font-bold">Contact Us</h1>
           <div className="flex items-center gap-4 mt-4">
             <FaLocationPinLock style={{ fontSize: "1rem" }} />
