@@ -9,13 +9,9 @@ import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
   const [ref, inView] = useInView();
-  const mql = window.matchMedia("(max-width: 900px)");
-  let mobileView = mql.matches;
   return (
     <div
-      className={`${
-        mobileView ? "" : "heroBg"
-      } flex md:px-[10%] h-[400px] p-4 items-center md:h-[600px] lg:min-h-[100px] overflow-hidden`}
+      className={` heroBg flex md:px-[10%] h-[400px] p-4 items-center md:h-[600px] lg:min-h-[100px] overflow-hidden`}
     >
       <div className="flex md:w-1/2 flex-col">
         <h1
