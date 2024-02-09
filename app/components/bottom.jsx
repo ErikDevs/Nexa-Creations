@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-800">
+    <div className="bg-gray-800 text-sm md:text-lg">
       <div className="py-20 grid lg:grid-cols-3 md:grid-cols-2 px-4 lg:px-[10%] gap-4 items-center text-white">
         <div className="flex md:flex-1 flex-col">
           <Image className="w-56" src={logo} />

@@ -15,17 +15,17 @@ const Hero = () => {
     >
       <div className="flex md:w-1/2 flex-col">
         <h1
-          className={`${integralCf.className}  text-white text-4xl  lg:text-6xl md:text-5xl tracking-wide`}
+          className={`${integralCf.className}  text-white text-2xl  lg:text-6xl md:text-5xl tracking-wide`}
         >
           Transforming Ideas into Visual masterpieces
         </h1>
-        <p className="text-white text-xl mt-10">
+        <p className="text-white text-sm md:text-lg mt-10">
           Crafting Unique and Engaging Digital Experiences
         </p>
         <Button
           className={`${
             inView ? "bounce" : ""
-          } mt-6 text-xl w-fit px-5 ring-1  ring-purple-500 hover:ring-2 transition-all  font-normal`}
+          } mt-6 text-lg w-fit px-5 ring-1  ring-purple-500 hover:ring-2 transition-all  font-normal`}
           name="Get in touch"
           ref={ref}
         />

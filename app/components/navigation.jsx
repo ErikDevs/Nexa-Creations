@@ -58,7 +58,7 @@ const Navigationbar = () => {
           className="progress-bar"
         ></motion.div>
         <nav
-          className={`${dayOne.className} text-white relative md:justify-between bg-transparent justify-end flex items-center`}
+          className={`${dayOne.className} text-white md:justify-between bg-transparent justify-end sticky top-0 flex items-center`}
         >
           <div className="absolute lg:hidden left-0 top-4">
             {isOpen ? (

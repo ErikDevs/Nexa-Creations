@@ -9,7 +9,9 @@ const Testimonials = () => {
   return (
     <div className="px-4">
       <div>
-        <h1 className={`text-4xl mt-16 ${integralCf.className} text-white text-center underline underline-offset-8 decoration-purple-500`}>
+        <h1
+          className={`text-2xl md:text-4xl mt-16 ${integralCf.className} text-white text-center underline underline-offset-8 decoration-purple-500`}
+        >
           Client Testmonials
         </h1>
       </div>
@@ -25,7 +27,9 @@ const Testimonials = () => {
               >
                 "
               </h1>
-              <p>{testmony.message}</p>
+              <p className="text-sm leading-loose md:text-lg">
+                {testmony.message}
+              </p>
             </div>
             <div className="flex gap-6  w-full mt-4 items-center">
               <Image
@@ -33,7 +37,7 @@ const Testimonials = () => {
                 src={man}
               />
               <div className="flex flex-col">
-                <h2 className="font-bold">{testmony.name}</h2>
+                <h2 className="font-bold text-sm">{testmony.name}</h2>
                 <p className="text-xs">{testmony.destignation}</p>
               </div>
             </div>

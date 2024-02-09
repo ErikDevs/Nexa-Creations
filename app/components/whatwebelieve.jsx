@@ -14,10 +14,12 @@ const Ourphilosophy = () => {
         className={`${inView ? "animation-right" : ""} flex flex-col w-full`}
         ref={ref}
       >
-        <h1 className={`${integralCf.className} text-4xl tracking-wider`}>
+        <h1
+          className={`${integralCf.className} text-2xl md:text-4xl tracking-wider`}
+        >
           Our Design Philosophy
         </h1>
-        <p className={`mt-10 text-xl leading-relaxed`}>
+        <p className={`mt-10 md:text-xl text-sm leading-loose`}>
           We believe that design is more than aesthetics; it's a powerful tool
           that shapes perceptions, builds connections, and drives results. Our
           approach is rooted in collaboration, pushing boundaries, and turning

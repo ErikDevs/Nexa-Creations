@@ -22,11 +22,13 @@ const WhyChooseUs = () => {
           animatedElementRef.current = el;
         }}
       >
-        <h1 className={`${integralCf.className} text-4xl tracking-wider`}>
+        <h1
+          className={`${integralCf.className} text-2xl md:text-4xl tracking-wider`}
+        >
           Why Choose Nexa Creatives
         </h1>
         <ol
-          className="text-xl px-4 leading-relaxed"
+          className="text-sm md:text-xl px-4 md:mt-6 leading-loose"
           style={{ listStyleType: "decimal" }}
         >
           <li>
