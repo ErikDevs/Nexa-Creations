@@ -1,9 +1,9 @@
 export const navLink = [
-  { href: "/", key: "home", label: "HOME" },
-  { href: "/#what-we-do", key: "work", label: "SERVICES" },
-  { href: "#aboutus", key: "about", label: "ABOUT US" },
-  { href: "/portfolio", key: "portifolio", label: "PORTFOLIO" },
-  { href: "/#contact", key: "contact", label: "CONTACT" },
+  { href: "", key: "home", label: "HOME" },
+  { href: "", key: "work", label: "SERVICES" },
+  { href: "", key: "about", label: "ABOUT US" },
+  { href: "", key: "portifolio", label: "PORTFOLIO" },
+  { href: "", key: "contact", label: "CONTACT" },
 ];
 
 export const testmonials = [
