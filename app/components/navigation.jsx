@@ -10,7 +10,7 @@ import { TfiAlignJustify } from "react-icons/tfi";
 import { TfiClose } from "react-icons/tfi";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 
-const Navbar = () => {
+const Navigationbar = () => {
   const [bgColor, setBgColor] = useState(false);
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -125,4 +125,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navigationbar;
