@@ -1,40 +1,44 @@
 "use client";
 import React from "react";
 import { integralCf } from "@/app/fonts/fonts";
-import { useInView } from "react-intersection-observer";
 import Button from "./one";
-import heroPhoto from "../../public/home-page.png";
+import youngMan from "../../public/young-man.png";
 import mobileHeroPhoto from "../../public/hero-photo.png";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
-  const [ref, inView] = useInView({
-    threshold: 0,
-  });
-
+  const [ref, inView] = useInView();
+  const mql = window.matchMedia("(max-width: 900px)");
+  let mobileView = mql.matches;
   return (
-    <div className="px-4 h-screen items-center flex">
-      <div className="flex-col items-start">
-        <div
-          ref={ref}
-          className={`${
-            inView ? "animation-top" : ""
-          } w-full flex flex-col items-start`}
+    <div
+      className={`${
+        mobileView ? "" : "heroBg"
+      } flex md:px-[10%] h-[400px] p-4 items-center md:h-[600px] lg:min-h-[100px] overflow-hidden`}
+    >
+      <div className="flex md:w-1/2 flex-col">
+        <h1
+          className={`${integralCf.className}  text-white text-4xl  lg:text-6xl md:text-5xl tracking-wide`}
         >
-          <h1
-            className={`${integralCf.className} text-white text-4xl  tracking-wide`}
-          >
-            Transforming Ideas into Visual masterpieces
-          </h1>
-          <p className="text-white text-xl mt-10">
-            Crafting Unique and Engaging Digital Experiences
-          </p>
-        </div>
-        <Button className="mt-6 text-xl font-normal" name="GET IN TOUCH" />
-        <hr className="w-32 bg-purple-500 border-none h-[2px]" />
+          Transforming Ideas into Visual masterpieces
+        </h1>
+        <p className="text-white text-xl mt-10">
+          Crafting Unique and Engaging Digital Experiences
+        </p>
+        <Button
+          className={`${
+            inView ? "bounce" : ""
+          } mt-6 text-xl w-fit px-5 ring-1  ring-purple-500 hover:ring-2 transition-all  font-normal`}
+          name="Get in touch"
+          ref={ref}
+        />
       </div>
-      <Image className="md:absolute hidden top-0 -z-10" src={heroPhoto} />
-      <Image className="absolute bottom-56 -z-10" src={mobileHeroPhoto} />
+      <Image className="hidden lg:block w-[40%]" src={youngMan} />
+      <Image
+        className="animation-top top-10 absolute -z-10 lg:hidden bottom-56"
+        src={mobileHeroPhoto}
+      />
     </div>
   );
 };

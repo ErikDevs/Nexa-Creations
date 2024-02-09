@@ -8,13 +8,13 @@ import Button from "./one";
 
 const Contact = () => {
   return (
-    <div className="px-4 background flex flex-col  justify-center items-center mt-20">
+    <div className="px-4 flex flex-col py-10 lg:px-[10%] justify-center items-center bg-gray-950 mt-20">
       <h1
-        className={`text-white z-10 ${integralCf.className} text-4xl tracking-wider`}
+        className={`text-white ${integralCf.className} text-4xl underline underline-offset-8 decoration-purple-500 tracking-wider`}
       >
         Contact Us Today
       </h1>
-      <div className="bg-transparent flex-col  z-10 justify-center items-center  relative  mt-10 rounded-lg w-full">
+      <div className="bg-transparent flex-col md:grid grid-cols-2  justify-center items-center  mt-10 rounded-lg w-full">
         <div className="px-4 text-white flex flex-col text-lg rounded-lg py-4 bg-red-500 w-full">
           <h1 className="text-2xl mb-4 font-bold">Contact Info</h1>
           <div className="flex items-center gap-4 mt-4">

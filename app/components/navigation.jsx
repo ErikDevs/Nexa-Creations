@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { dayOne } from "@/app/fonts/fonts";
 import Image from "next/image";
 import logo from "../../public/logo.png";
@@ -8,6 +8,7 @@ import { navLink } from "@/constants/constants";
 import { Instagram, Facebook, LinkedIn } from "@mui/icons-material";
 import { TfiAlignJustify } from "react-icons/tfi";
 import { TfiClose } from "react-icons/tfi";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 
 const Navbar = () => {
   const [bgColor, setBgColor] = useState(false);
@@ -28,17 +29,38 @@ const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  const { scrollYProgress } = useScroll();
+
+  const navigationVariants = {
+    visible: {
+      opacity: 1,
+      transition: { x: { velocity: 100 }, duration: 0.3 },
+    },
+    hidden: {
+      //x: -250,
+      opacity: 0,
+      transition: {
+        x: { velocity: 100 },
+        duration: 0.3,
+      },
+    },
+  };
+
   return (
     <>
       <div
         className={`${
-          bgColor ? "" : "bg-gray-900"
-        } sticky md:top-0 h-16 px-4`}
+          bgColor ? "bg-gray-900" : ""
+        } sticky md:top-0 h-16 px-4  lg:px-[10%]`}
       >
+        <motion.div
+          style={{ scaleX: scrollYProgress }}
+          className="progress-bar"
+        ></motion.div>
         <nav
-          className={`${dayOne.className} text-white relative justify-end flex items-center`}
+          className={`${dayOne.className} text-white relative md:justify-between bg-transparent justify-end flex items-center`}
         >
-          <div className="absolute left-0 top-4">
+          <div className="absolute lg:hidden left-0 top-4">
             {isOpen ? (
               <button onClick={() => setIsOpen(false)}>
                 <TfiClose style={{ fontSize: "1.5rem" }} />
@@ -54,31 +76,12 @@ const Navbar = () => {
             <Image className="w-48" src={logo}></Image>
           </Link>
 
-          {isOpen && (
-            <ul
-              className={`${
-                isOpen && "open"
-              }  bg-gray-900 md:gap-8 md:px-10 md:py-10 mobile md:w-1/2 absolute w-full h-screen px-4 -left-4 top-16 md:h-auto md:top-20`}
-            >
-              {navLink.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    className="hover-underline-animation py-4 transition-colors"
-                    href={link.href}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-
           {/* Desktop navigation */}
 
           <ul className="lg:flex hidden gap-8">
             {navLink.map((link) => (
               <Link
-                className="hover-underline-animation transition-colors"
+                className="hover-underline-animation transition-all"
                 href={link.href}
                 key={link.label}
               >
@@ -93,8 +96,31 @@ const Navbar = () => {
             <LinkedIn />
           </div>
         </nav>
+
+        {/* mobile navigation */}
+        <AnimatePresence>
+          <motion.div
+            initial="hidden"
+            animate={isOpen ? "visible" : "hidden"}
+            exit="hidden"
+            variants={navigationVariants}
+            className={`flex text-white text-sm md:text-lg h-screen md:w-full md:h-[400px] px-10 -ml-4 shadow-lg w-3/4 rounded-lg bg-gray-900 m-0`}
+          >
+            <ul className={`${dayOne.className}`}>
+              {navLink.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    className="hover-underline-animation py-4 transition-colors"
+                    href={link.href}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </AnimatePresence>
       </div>
-      <hr className="bg-purple-500 border-none h-[2px] w-full" />
     </>
   );
 };

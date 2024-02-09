@@ -1,23 +1,18 @@
 "use client";
 import { integralCf } from "@/app/fonts/fonts";
-import React, { useRef } from "react";
 import Image from "next/image";
 import Drone from "../../public/drone.png";
 import { useInView } from "react-intersection-observer";
 
 const Ourphilosophy = () => {
-  const [ref, inView] = useInView({
-    threshold: 0,
-  });
-  const animatedElementRef = useRef(null);
+  const [ref, inView] = useInView();
+
   return (
-    <div className="text-white mt-8 flex-col px-4 w-full justify-center items-center">
+    <div className="text-white px-4 grid grid-cols-1 md:grid-cols-2 py-10 lg:px-[10%]  bg-gray-950 items-center">
+      <Image className={` animation-bottom hidden md:block`} src={Drone} />
       <div
         className={`${inView ? "animation-right" : ""} flex flex-col w-full`}
-        ref={(el) => {
-          ref(el);
-          animatedElementRef.current = el;
-        }}
+        ref={ref}
       >
         <h1 className={`${integralCf.className} text-4xl tracking-wider`}>
           Our Design Philosophy
@@ -31,16 +26,6 @@ const Ourphilosophy = () => {
           breathe life into every project with a blend of strategy and
           creativity.
         </p>
-      </div>
-      <div className="w-3/4">
-        <Image
-          className={`${inView ? "animation-left" : ""} hidden`}
-          src={Drone}
-          ref={(el) => {
-            ref(el);
-            animatedElementRef.current = el;
-          }}
-        />
       </div>
     </div>
   );

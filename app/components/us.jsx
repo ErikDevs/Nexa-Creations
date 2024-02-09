@@ -1,19 +1,21 @@
 "use client";
-import React, { useRef } from "react";
 import Image from "next/image";
-import Woman from "../../public/woman.png";
+import Woman from "../../public/design.png";
 import { integralCf } from "@/app/fonts/fonts";
 import { useInView } from "react-intersection-observer";
 
 const AboutUs = () => {
-  const [ref, inView] = useInView({
-    threshold: 0,
-  });
-  const animatedElementRef = useRef(null);
+  const [ref, inView] = useInView({ triggerOnce: true });
   return (
-    <div className="px-4 h-screen flex flex-col justify-center items-center">
-      <div className={`${inView ? "animation-bottom" : ""} w-full  text-white`}>
-        <h1 className={`${integralCf.className} tracking-wider text-4xl`}>
+    <div className="px-4 lg:px-[10%]  overflow-hidden grid md:grid-cols-2 grid-cols-1 items-center bg-gray-950">
+      <Image className={`${inView ? "" : ""} md:block hidden`} src={Woman} />
+      <div
+        className={`${inView ? "animation-right" : ""}  text-white`}
+        ref={ref}
+      >
+        <h1
+          className={`${integralCf.className} tracking-wider text-4xl lg:text-5xl`}
+        >
           Where Vision Meets Innovation
         </h1>
         <p className="mt-10 text-xl leading-relaxed">
@@ -22,16 +24,6 @@ const AboutUs = () => {
           coupled with cutting-edge technology, allows us to transform your
           ideas into visually stunning, user-centric masterpieces.
         </p>
-      </div>
-      <div className="w-3/4">
-        <Image
-          className={`${inView ? "animation-right" : ""} absolute hidden`}
-          src={Woman}
-          ref={(el) => {
-            ref(el);
-            animatedElementRef.current = el;
-          }}
-        />
       </div>
     </div>
   );

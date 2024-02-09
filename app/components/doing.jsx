@@ -14,16 +14,16 @@ const Projects = () => {
   });
   const animatedElementRef = useRef(null);
   return (
-    <div className="text-white mt-16  w-full px-[10%]">
+    <div className="text-white  bg-gray-950 py-10 px-4 lg:px-[10%]">
       <div className="flex flex-col">
         <div>
           <h1
-            className={`${integralCf.className} text-center text-4xl tracking-wider`}
+            className={`${integralCf.className} text-center underline underline-offset-8 decoration-purple-500 text-4xl tracking-wider`}
           >
             Our latest Projects
           </h1>
         </div>
-        <div className="mt-10 grid grid-rows-2  grid-cols-1 gap-4">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="w-auto mt-10">
             <Image
               className={`object-scale-down ${

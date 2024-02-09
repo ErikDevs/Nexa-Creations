@@ -9,8 +9,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-900">
-      <div className="px-4 md:mt-0 py-20 flex-col  text-white">
+    <div className="bg-gray-800">
+      <div className="py-20 grid lg:grid-cols-3 md:grid-cols-2 px-4 lg:px-[10%] gap-4 items-center text-white">
         <div className="flex md:flex-1 flex-col">
           <Image className="w-56" src={logo} />
           <p className="text-lg mt-5">Transform Your Business With Us</p>
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className="h-[1px]" />
-      <p className="h-16 px-[10%] text-white text-xs flex justify-start items-center">
+      <p className="lg:px-[10%] px-4 text-white text-xs md:text-lg text-center py-5">
         Copyright@2024nexacreations All rights reserves.
       </p>
     </div>
